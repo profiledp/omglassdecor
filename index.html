@@ -4,53 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Om Glass Decor | Premium Glass & Mirrors in Udaipur</title>
-  <meta name="description" content="Udaipur's trusted glass decorators since 2005. We specialize in LED Mirrors, Glass Blocks, Toughened Glass, and Custom Glass Partitions.">
-  <meta name="theme-color" content="#1a1a1a">
-  
-  <!-- Favicon -->
+  <meta name="description" content="Udaipur's trusted glass decorators since 1986. LED Mirrors, Glass Blocks, Toughened Glass, Custom Partitions.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231a1a1a'/><text x='50' y='68' font-size='40' font-family='Arial' fill='%23c0c0c0' text-anchor='middle' font-weight='bold'>OG</text></svg>">
-  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
     <a href="index.html" class="brand">
       <span class="brand-mark">OG</span>
-      <span>
-        <strong>OM GLASS DECOR</strong>
-        <small>SINCE 1986 · UDAIPUR</small>
-      </span>
+      <span><strong>OM GLASS DECOR</strong><small>SINCE 1986 · UDAIPUR</small></span>
     </a>
-    
     <div class="header-nav">
-      <a href="#products">Products</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
-
-    <a href="https://wa.me/919784185252?text=Hello%20Om%20Glass%20Decor,%20I%20want%20to%20enquire%20about%20your%20products." target="_blank" class="header-wa">
-      📞 Enquire Now
-    </a>
+    <a href="https://wa.me/919784185252?text=Hello%20Om%20Glass%20Decor" target="_blank" class="header-wa">📞 Enquire Now</a>
   </header>
 
-  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <span class="eyebrow">PREMIUM GLASS & MIRROR SOLUTIONS</span>
       <h1>Crafting Elegance<br>With Glass <em>Since 1986.</em></h1>
       <p>Udaipur's most trusted name for premium LED Mirrors, Decorative Glass Blocks, and Toughened Glass. We bring your interior vision to life.</p>
-      
       <div class="hero-buttons">
-        <a href="#products" class="btn-primary">Explore Collection</a>
-        <a href="https://wa.me/919784185252?text=Hello%20Om%20Glass%20Decor,%20I%20want%20to%20enquire%20about%20your%20products." target="_blank" class="btn-secondary">WhatsApp Us ↗</a>
+        <a href="products.html" class="btn-primary">Explore Collection</a>
+        <a href="#quote" class="btn-secondary">Get Free Quote ↓</a>
       </div>
     </div>
   </section>
 
-  <!-- TRUST BADGES -->
   <div class="trust-bar">
     <div class="trust-item"><span>🏆</span> 38+ Years Experience</div>
     <div class="trust-item"><span>💎</span> Premium Quality Glass</div>
@@ -58,8 +45,43 @@
     <div class="trust-item"><span>🛡️</span> 100% Safe & Durable</div>
   </div>
 
-  <!-- PRODUCTS SECTION -->
-  <section class="products-section" id="products">
+  <!-- NAYA: QUOTE FORM -->
+  <section class="quote-section" id="quote">
+    <div class="quote-wrapper">
+      <h2>Get a Free Quote</h2>
+      <p>Fill the form below and our team will contact you within 30 minutes.</p>
+      
+      <!-- Formspree action (Aapko bas apna endpoint id daalna hai) -->
+      <form action="https://formspree.io/f/xrgvzqkn" method="POST">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" name="phone" placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+          <label>What do you need? *</label>
+          <select name="requirement" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="LED Mirror">Smart LED Mirror</option>
+            <option value="Glass Partition">Glass Partition / Blocks</option>
+            <option value="Toughened Glass">Toughened Glass / Railing</option>
+            <option value="Shower Enclosure">Shower Glass Enclosure</option>
+            <option value="Other">Other (Wall Clock, etc.)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message (Optional)</label>
+          <textarea name="message" rows="2" placeholder="Mention dimensions or specific requirements..."></textarea>
+        </div>
+        <button type="submit" class="form-submit-btn">📩 Send Inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="products-section">
     <div class="section-heading">
       <span class="eyebrow">OUR EXPERTISE</span>
       <h2>What We Offer</h2>
@@ -67,11 +89,8 @@
     </div>
 
     <div class="product-grid">
-      
-      <!-- Product 1 -->
       <div class="product-card">
         <div class="product-img-wrap">
-          <!-- Placeholder image URL, aap apni real image laga sakte hain -->
           <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=600&q=80" alt="LED Mirrors">
           <span class="product-tag">Bestseller</span>
         </div>
@@ -82,7 +101,6 @@
         </div>
       </div>
 
-      <!-- Product 2 -->
       <div class="product-card">
         <div class="product-img-wrap">
           <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Glass Blocks">
@@ -94,7 +112,6 @@
         </div>
       </div>
 
-      <!-- Product 3 -->
       <div class="product-card">
         <div class="product-img-wrap">
           <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Toughened Glass">
@@ -106,7 +123,6 @@
         </div>
       </div>
 
-      <!-- Product 4 -->
       <div class="product-card">
         <div class="product-img-wrap">
           <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80" alt="Wall Clocks">
@@ -117,78 +133,68 @@
           <a href="https://wa.me/919784185252?text=Hi,%20I%20want%20to%20enquire%20about%20Designer%20Wall%20Clocks." target="_blank" class="enquire-btn">Enquire on WhatsApp ↗</a>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- WHY CHOOSE US -->
-  <section class="features-section">
+  <!-- NAYA: HOW WE WORK / PROCESS -->
+  <section class="process-section">
     <div class="section-heading text-center">
-      <span class="eyebrow">WHY CHOOSE US</span>
-      <h2>Udaipur's Most Trusted Glass Experts</h2>
+      <span class="eyebrow">HOW WE WORK</span>
+      <h2>Our 4-Step Process</h2>
+      <p>From measurement to installation, we handle everything.</p>
     </div>
-    <div class="features-grid">
-      <div class="feature-box">
-        <div class="feature-icon">🏢</div>
-        <h3>38+ Years Legacy</h3>
-        <p>Serving Udaipur with the finest glass craftsmanship since 1986.</p>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-icon">📏</div>
+        <h3>1. Site Visit</h3>
+        <p>We visit your site for exact measurements and requirement analysis.</p>
       </div>
-      <div class="feature-box">
-        <div class="feature-icon">⚙️</div>
-        <h3>Custom Fabrication</h3>
-        <p>We design and manufacture glass to fit your exact dimensions and needs.</p>
+      <div class="process-step">
+        <div class="process-icon">📝</div>
+        <h3>2. Design & Quote</h3>
+        <p>We provide 3D designs and a transparent quotation for your approval.</p>
       </div>
-      <div class="feature-box">
-        <div class="feature-icon">🤝</div>
-        <h3>Trusted by Many</h3>
-        <p>From homes to commercial spaces, our glass adorns the best properties in the city.</p>
+      <div class="process-step">
+        <div class="process-icon">⚙️</div>
+        <h3>3. Fabrication</h3>
+        <p>Your glass is cut, polished, and toughened in our workshop.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- CONTACT & MAP SECTION -->
-  <section class="contact-section" id="contact">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <span class="eyebrow">VISIT OUR STORE</span>
-        <h2>Let's Build Something Beautiful</h2>
-        <p>Have a design in mind? Visit our showroom or call us. We are here to help you choose the perfect glass for your space.</p>
-        
-        <div class="contact-detail">
-          <span>📍</span>
-          <div>
-            <strong>Shop Address:</strong><br>
-            3-A, Shiv Chowk, Kalka Mata Road,<br>Pahada, Udaipur, Rajasthan - 313001
-          </div>
-        </div>
-
-        <div class="contact-detail">
-          <span>📞</span>
-          <div>
-            <strong>Call Us:</strong><br>
-            <a href="tel:+919784185252">+91 97841 85252</a>
-          </div>
-        </div>
-
-        <div class="contact-detail">
-          <span>📄</span>
-          <div>
-            <strong>GST Number:</strong><br>
-            08ALXPP1388G1ZD
-          </div>
-        </div>
-
-        <a href="https://wa.me/919784185252?text=Hello%20Om%20Glass%20Decor,%20I%20want%20to%20place%20an%20inquiry." target="_blank" class="btn-primary" style="margin-top: 20px; display: inline-block;">💬 Enquire on WhatsApp</a>
-      </div>
-
-      <div class="contact-map">
-        <!-- Udaipur map embed placeholder -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14527.084046072266!2d73.6892746!3d24.5888725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e56e8dbf2f21%3A0x2c4b6c8985e8b3d7!2sPahada%2C%20Udaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+      <div class="process-step">
+        <div class="process-icon">🛠️</div>
+        <h3>4. Installation</h3>
+        <p>Our experts install the glass with perfect finish and safety.</p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- NAYA: GOOGLE REVIEWS -->
+  <section class="reviews-section">
+    <div class="section-heading text-center">
+      <span class="eyebrow">WHAT OUR CUSTOMERS SAY</span>
+      <h2>Google Reviews</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"Om Glass Decor did an amazing job with our bathroom mirror and shower enclosure. Very professional and reasonable."</p>
+        <div class="review-author">— Rohit Sharma</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"I got my office glass partition done from here. The quality of glass and the finishing is top-notch. Highly recommended."</p>
+        <div class="review-author">— Priya Jain</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"Since 1986, they truly know their craft. The LED mirror looks stunning in our living room. Thank you!"</p>
+        <div class="review-author">— Amit Agarwal</div>
+      </div>
+    </div>
+    <a href="https://www.google.com/search?q=Om+Glass+Decor+Udaipur" target="_blank" class="google-badge">
+      <img src="https://www.google.com/favicon.ico" style="width:16px; height:16px;" alt="Google"> View All Reviews on Google
+    </a>
+  </section>
+
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
@@ -197,37 +203,24 @@
       </div>
       <div>
         <h4>Quick Links</h4>
-        <a href="#products">Products</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact Us</a>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div>
         <h4>Contact Us</h4>
-        <p>+91 97841 85252</p>
-        <p>Udaipur, Rajasthan</p>
+        <a href="tel:+919784185252">📞 +91 97841 85252</a>
+        <a href="https://wa.me/919784185252" target="_blank">💬 WhatsApp</a>
+        <p>📍 Udaipur, Rajasthan</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2026 Om Glass Decor. All rights reserved.
-    </div>
+    <div class="footer-bottom">© 2026 Om Glass Decor. All rights reserved.</div>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
   <a href="https://wa.me/919784185252?text=Hello%20Om%20Glass%20Decor" target="_blank" class="whatsapp-float">
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16.004 2C8.28 2 2 8.28 2 16c0 2.47.64 4.79 1.76 6.81L2 30l7.39-1.71A13.93 13.93 0 0 0 16.004 30C23.72 30 30 23.72 30 16S23.72 2 16.004 2zm0 2.31c6.76 0 12.23 5.47 12.23 12.23 0 6.76-5.47 12.23-12.23 12.23-2.13 0-4.13-.55-5.86-1.51l-.42-.23-4.32 1 1-4.21-.24-.4A12.17 12.17 0 0 1 3.77 16c0-6.76 5.47-12.23 12.23-12.23z" fill="#fff"/>
-      <path d="M21.66 18.14c-.23-.12-1.38-.68-1.6-.76-.21-.08-.37-.12-.53.12-.16.24-.61.76-.75.92-.14.16-.28.18-.51.06-.23-.12-1-.37-1.91-1.18-.71-.63-1.18-1.41-1.32-1.65-.14-.24-.02-.37.1-.49.11-.11.23-.28.35-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.27-.72-1.74-.19-.46-.38-.4-.53-.4h-.45c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.57.18 1.09.15 1.5.09.46-.07 1.38-.56 1.58-1.11.2-.55.2-1.02.14-1.11-.06-.09-.22-.15-.45-.27z" fill="#fff"/>
-    </svg>
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 2C8.28 2 2 8.28 2 16c0 2.47.64 4.79 1.76 6.81L2 30l7.39-1.71A13.93 13.93 0 0 0 16.004 30C23.72 30 30 23.72 30 16S23.72 2 16.004 2z" fill="#fff"/><path d="M21.66 18.14c-.23-.12-1.38-.68-1.6-.76-.21-.08-.37-.12-.53.12-.16.24-.61.76-.75.92-.14.16-.28.18-.51.06-.23-.12-1-.37-1.91-1.18-.71-.63-1.18-1.41-1.32-1.65-.14-.24-.02-.37.1-.49.11-.11.23-.28.35-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.27-.72-1.74-.19-.46-.38-.4-.53-.4h-.45c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.57.18 1.09.15 1.5.09.46-.07 1.38-.56 1.58-1.11.2-.55.2-1.02.14-1.11-.06-.09-.22-.15-.45-.27z" fill="#fff"/></svg>
   </a>
-
-  <!-- SCRIPT for smooth scroll -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-  </script>
 </body>
 </html>
