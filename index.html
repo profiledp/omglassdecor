@@ -32,6 +32,7 @@
     .header-wa:hover { background: var(--gold); color: var(--text-dark); }
 
     /* ==================== HERO (FIXED FOR ZOOM) ==================== */
+    /* Background ko 'fixed' kar diya taaki zoom pe na hile */
     .hero { 
       position: relative; 
       min-height: 85vh; 
@@ -40,11 +41,12 @@
       padding: 0 10%; 
       overflow: hidden; 
       
-      /* Background Image Fix: Zoom in/out pe perfect fit rahegi */
+      /* Image Fix */
       background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=85');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     .hero-overlay { 
@@ -244,6 +246,8 @@
       .quote-split-wrapper { grid-template-columns: 1fr; }
       .quote-info-side { min-height: 300px; }
       .quote-section { padding: 50px 5%; }
+      /* Mobile pe fixed background ajeeb lagta hai, isliye scroll karenge */
+      .hero { background-attachment: scroll; }
     }
     @media (max-width: 650px) {
       .site-header { padding: 12px 5%; }
@@ -280,7 +284,7 @@
     <a href="https://wa.me/919784185252?text=Hello%20Om%20Glass%20Decor" target="_blank" class="header-wa">📞 Enquire Now</a>
   </header>
 
-  <!-- UPDATED HERO SECTION -->
+  <!-- UPDATED HERO SECTION (Background Fixed) -->
   <section class="hero">
     <div class="hero-overlay"></div>
     
