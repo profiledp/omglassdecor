@@ -52,14 +52,13 @@
 
     /* ==================== SPLIT QUOTE SECTION ==================== */
     .quote-section { 
-      padding: 0 7% 80px; 
+      padding: 80px 7%; 
       background: var(--bg-light); 
       position: relative;
-      z-index: 10;
     }
     .quote-split-wrapper {
       max-width: 1100px;
-      margin: -50px auto 0;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
       background: #fff;
@@ -194,8 +193,7 @@
       .header-nav { display: none; }
       .quote-split-wrapper { grid-template-columns: 1fr; }
       .quote-info-side { min-height: 300px; }
-      .quote-section { padding: 0 5% 50px; }
-      .quote-split-wrapper { margin-top: -30px; }
+      .quote-section { padding: 50px 5%; }
     }
     @media (max-width: 650px) {
       .site-header { padding: 12px 5%; }
@@ -247,71 +245,6 @@
     <div class="trust-item"><span>🎨</span> Custom Designs</div>
     <div class="trust-item"><span>🛡️</span> 100% Safe & Durable</div>
   </div>
-
-  <!-- SPLIT LAYOUT (QUOTE FORM + SHOP INFO) -->
-  <section class="quote-section" id="quote">
-    <div class="quote-split-wrapper">
-      
-      <!-- LEFT SIDE: QUOTE FORM -->
-      <div class="quote-form-side">
-        <h2>Get a Free Quote</h2>
-        <p>Fill the form and our team will contact you within 30 minutes.</p>
-        
-        <!-- Custom Alerts (Default hidden) -->
-        <div id="formAlert" class="custom-form-alert">⚠️ Please fill in all required fields.</div>
-        <div id="formSuccess" class="custom-form-success">✅ Thank you! Your inquiry has been sent successfully.</div>
-
-        <!-- Form (novalidate attribute disables browser's default tooltips) -->
-        <form id="quoteForm" action="https://formspree.io/f/xrgvzqkn" method="POST" novalidate>
-          <div class="form-group">
-            <label>Your Name *</label>
-            <input type="text" id="qName" name="name" placeholder="Enter your full name">
-          </div>
-          <div class="form-group">
-            <label>Phone Number *</label>
-            <input type="tel" id="qPhone" name="phone" placeholder="Enter 10-digit mobile number">
-          </div>
-          <div class="form-group">
-            <label>What do you need? *</label>
-            <select id="qService" name="requirement">
-              <option value="" disabled selected>Select a service</option>
-              <option value="LED Mirror">Smart LED Mirror</option>
-              <option value="Glass Partition">Glass Partition / Blocks</option>
-              <option value="Toughened Glass">Toughened Glass / Railing</option>
-              <option value="Shower Enclosure">Shower Glass Enclosure</option>
-              <option value="Other">Other (Wall Clock, etc.)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Message (Optional)</label>
-            <textarea name="message" rows="2" placeholder="Mention dimensions or specific requirements..."></textarea>
-          </div>
-          <button type="submit" class="form-submit-btn" id="submitBtn">📩 Send Inquiry</button>
-        </form>
-      </div>
-
-      <!-- RIGHT SIDE: SHOP IMAGE + ADDRESS -->
-      <div class="quote-info-side">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Om Glass Decor Showroom" class="shop-image">
-        
-        <div class="shop-info-box">
-          <h3>Visit Our Showroom</h3>
-          <div class="info-item">
-            <span>📍</span>
-            <p>3-A, Shiv Chowk, Kalka Mata Road, Pahada, Udaipur, Rajasthan - 313001</p>
-          </div>
-          <div class="info-item">
-            <span>📞</span>
-            <p><a href="tel:+919784185252">+91 97841 85252</a></p>
-          </div>
-          <a href="https://wa.me/919784185252?text=Hello%20Om%20Glass%20Decor,%20I%20want%20to%20visit%20your%20showroom." target="_blank" class="btn-whatsapp-small">
-            💬 Chat on WhatsApp
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
 
   <section class="products-section">
     <div class="section-heading">
@@ -429,6 +362,69 @@
     </div>
   </section>
 
+  <!-- NAYA: SPLIT LAYOUT (QUOTE FORM + SHOP INFO) - Now at the end -->
+  <section class="quote-section" id="quote">
+    <div class="quote-split-wrapper">
+      
+      <!-- LEFT SIDE: QUOTE FORM -->
+      <div class="quote-form-side">
+        <h2>Get a Free Quote</h2>
+        <p>Fill the form and our team will contact you within 30 minutes.</p>
+        
+        <div id="formAlert" class="custom-form-alert">⚠️ Please fill in all required fields.</div>
+        <div id="formSuccess" class="custom-form-success">✅ Thank you! Your inquiry has been sent successfully.</div>
+
+        <form id="quoteForm" action="https://formspree.io/f/xrgvzqkn" method="POST" novalidate>
+          <div class="form-group">
+            <label>Your Name *</label>
+            <input type="text" id="qName" name="name" placeholder="Enter your full name">
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" id="qPhone" name="phone" placeholder="Enter 10-digit mobile number">
+          </div>
+          <div class="form-group">
+            <label>What do you need? *</label>
+            <select id="qService" name="requirement">
+              <option value="" disabled selected>Select a service</option>
+              <option value="LED Mirror">Smart LED Mirror</option>
+              <option value="Glass Partition">Glass Partition / Blocks</option>
+              <option value="Toughened Glass">Toughened Glass / Railing</option>
+              <option value="Shower Enclosure">Shower Glass Enclosure</option>
+              <option value="Other">Other (Wall Clock, etc.)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message (Optional)</label>
+            <textarea name="message" rows="2" placeholder="Mention dimensions or specific requirements..."></textarea>
+          </div>
+          <button type="submit" class="form-submit-btn" id="submitBtn">📩 Send Inquiry</button>
+        </form>
+      </div>
+
+      <!-- RIGHT SIDE: SHOP IMAGE + ADDRESS -->
+      <div class="quote-info-side">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Om Glass Decor Showroom" class="shop-image">
+        
+        <div class="shop-info-box">
+          <h3>Visit Our Showroom</h3>
+          <div class="info-item">
+            <span>📍</span>
+            <p>3-A, Shiv Chowk, Kalka Mata Road, Pahada, Udaipur, Rajasthan - 313001</p>
+          </div>
+          <div class="info-item">
+            <span>📞</span>
+            <p><a href="tel:+919784185252">+91 97841 85252</a></p>
+          </div>
+          <a href="https://wa.me/919784185252?text=Hello%20Om%20Glass%20Decor,%20I%20want%20to%20visit%20your%20showroom." target="_blank" class="btn-whatsapp-small">
+            💬 Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
@@ -460,7 +456,7 @@
   <!-- CUSTOM FORM VALIDATION SCRIPT -->
   <script>
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
-      e.preventDefault(); // Default submit rokne ke liye
+      e.preventDefault();
       
       const name = document.getElementById('qName').value.trim();
       const phone = document.getElementById('qPhone').value.trim();
@@ -469,14 +465,12 @@
       const successBox = document.getElementById('formSuccess');
       const submitBtn = document.getElementById('submitBtn');
 
-      // 1. Validation Check
       if(!name || !phone || !service) {
         alertBox.style.display = 'block';
         setTimeout(() => { alertBox.style.display = 'none'; }, 4000);
         return;
       }
 
-      // Phone number validation (10 digits)
       if(phone.length !== 10 || isNaN(phone)) {
         alertBox.textContent = "⚠️ Please enter a valid 10-digit mobile number.";
         alertBox.style.display = 'block';
@@ -484,7 +478,6 @@
         return;
       }
 
-      // 2. Agar sab sahi hai, toh data Formspree pe bhejenge (AJAX/Fetch se)
       submitBtn.textContent = "Sending...";
       submitBtn.disabled = true;
 
@@ -496,12 +489,10 @@
         headers: { 'Accept': 'application/json' }
       }).then(response => {
         if (response.ok) {
-          // Success
           this.reset();
           successBox.style.display = 'block';
           setTimeout(() => { successBox.style.display = 'none'; }, 5000);
         } else {
-          // Error
           alertBox.textContent = "⚠️ Something went wrong. Please try again.";
           alertBox.style.display = 'block';
           setTimeout(() => { alertBox.style.display = 'none'; }, 4000);
