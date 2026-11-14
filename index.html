@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Om Glass Decor | Premium Glass Solutions in Udaipur</title>
-  <meta name="description" content="Om Glass Decor - Udaipur's trusted glass decorators since 2005. Toughened Glass, LED Mirrors, Glass Partitions. Visit us at Gandhi Nagar, Udaipur.">
+  <meta name="description" content="Om Glass Decor - Udaipur's trusted glass decorators since 2005. Toughened Glass, LED Mirrors, Glass Partitions.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230066cc'/><text x='50' y='68' font-size='40' font-family='Arial' fill='%23ffffff' text-anchor='middle' font-weight='bold'>OG</text></svg>">
   
   <link rel="manifest" href="manifest.json">
@@ -28,29 +28,42 @@
     /* --- TOP BAR --- */
     .top-bar { background: #f1f3f6; color: var(--text-light); font-size: 12px; padding: 8px 7%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
     .top-bar-left, .top-bar-right { display: flex; gap: 20px; align-items: center; }
-    .top-bar i { color: var(--primary-blue); margin-right: 5px; }
     .top-socials a { margin-left: 10px; color: var(--text-light); transition: 0.2s; }
     .top-socials a:hover { color: var(--primary-blue); }
 
     /* --- HEADER --- */
     .site-header { background: #fff; padding: 15px 7%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
     .brand { display: flex; align-items: center; gap: 10px; }
-    .brand-mark { width: 40px; height: 40px; background: var(--primary-blue); color: #fff; display: grid; place-items: center; font-weight: bold; font-size: 20px; border-radius: 4px; }
-    .brand strong { display: block; font-size: 20px; letter-spacing: 0.5px; color: var(--text-dark); font-weight: 800; line-height: 1; }
+    .brand-mark { width: 45px; height: 45px; background: var(--primary-blue); color: #fff; display: grid; place-items: center; font-weight: bold; font-size: 22px; border-radius: 6px; }
+    .brand strong { display: block; font-size: 22px; letter-spacing: 0.5px; color: var(--text-dark); font-weight: 800; line-height: 1; }
     .brand small { display: block; font-size: 10px; color: var(--primary-blue); letter-spacing: 2px; margin-top: 4px; text-transform: uppercase; font-weight: bold; }
     
     .header-nav { display: flex; gap: 25px; }
     .header-nav a { font-size: 13px; font-weight: 600; color: var(--text-dark); text-transform: uppercase; transition: color 0.2s; }
     .header-nav a:hover, .header-nav a.active { color: var(--primary-blue); }
 
-    /* --- HERO --- */
-    .hero { position: relative; height: 80vh; min-height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat fixed; }
-    .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); z-index: 1; }
+    /* --- HERO FIXED --- */
+    .hero { 
+      position: relative; 
+      height: 80vh; 
+      min-height: 500px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      text-align: center; 
+      
+      /* Image Fix */
+      background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: 1; }
     
     .hero-content { position: relative; z-index: 2; color: #fff; max-width: 800px; padding: 0 20px; }
-    .hero-content h1 { font-size: clamp(32px, 4vw, 50px); font-weight: 700; margin-bottom: 25px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+    .hero-content h1 { font-size: clamp(32px, 4vw, 55px); font-weight: 700; margin-bottom: 30px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); line-height: 1.2; }
     .hero-content .btn-hero { 
-      background: var(--gold); color: #222; padding: 14px 35px; border-radius: 30px; 
+      background: var(--gold); color: #222; padding: 15px 40px; border-radius: 30px; 
       font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; 
       display: inline-block; transition: 0.3s; border: none; cursor: pointer;
     }
@@ -108,7 +121,6 @@
     @media (max-width: 900px) {
       .top-bar-left span { display: none; }
       .header-nav { display: none; }
-      .hero { background-attachment: scroll; }
     }
     @media (max-width: 650px) {
       .site-header { padding: 15px 5%; }
@@ -125,22 +137,16 @@
 </head>
 <body>
 
-  <!-- TOP BAR (Updated Address & Contact) -->
   <div class="top-bar">
     <div class="top-bar-left">
       <span>📧 info@omglassdecor.com</span>
       <span>📞 +91 97841 85252</span>
     </div>
     <div class="top-bar-right">
-      <div class="top-socials">
-        <a href="#">FB</a>
-        <a href="#">IG</a>
-        <a href="#">IN</a>
-      </div>
+      <div class="top-socials"><a href="#">FB</a><a href="#">IG</a><a href="#">IN</a></div>
     </div>
   </div>
 
-  <!-- HEADER -->
   <header class="site-header">
     <a href="index.html" class="brand">
       <span class="brand-mark">OG</span>
@@ -155,7 +161,7 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO FIXED -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -164,7 +170,6 @@
     </div>
   </section>
 
-  <!-- FEATURED CATEGORIES -->
   <section class="featured-section">
     <h2 class="section-title">Featured Categories</h2>
     <div class="cat-grid">
@@ -187,7 +192,6 @@
     </div>
   </section>
 
-  <!-- ABOUT (Updated with Address & Year) -->
   <section class="about-section">
     <div class="about-image">
       <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Glass Manufacturing">
@@ -209,7 +213,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section class="contact-section" id="contact">
     <h2 style="font-size:32px; margin-bottom:10px;">Get a Quote</h2>
     <p style="color:var(--text-light); margin-bottom:30px;">Fill the form below to get a quick price estimate.</p>
@@ -217,14 +220,8 @@
     <div class="contact-box">
       <div id="formSuccess" class="form-success">✅ Thank you! Redirecting to WhatsApp...</div>
       <form id="quoteForm">
-        <div class="form-group">
-          <label>Your Name *</label>
-          <input type="text" id="qName" placeholder="Enter name" required>
-        </div>
-        <div class="form-group">
-          <label>Phone Number *</label>
-          <input type="tel" id="qPhone" placeholder="Enter 10-digit number" required>
-        </div>
+        <div class="form-group"><label>Your Name *</label><input type="text" id="qName" placeholder="Enter name" required></div>
+        <div class="form-group"><label>Phone Number *</label><input type="tel" id="qPhone" placeholder="Enter 10-digit number" required></div>
         <div class="form-group" style="display:flex; gap:10px;">
           <div style="flex:1;"><label>Height (ft)</label><input type="number" id="qHeight" placeholder="6"></div>
           <div style="flex:1;"><label>Width (ft)</label><input type="number" id="qWidth" placeholder="3"></div>
@@ -245,7 +242,6 @@
     </div>
   </section>
 
-  <!-- FOOTER (Updated Address) -->
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
@@ -254,10 +250,7 @@
       </div>
       <div>
         <h3>Quick Links</h3>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a><a href="contact.html">Contact</a>
       </div>
       <div>
         <h3>Contact</h3>
@@ -269,7 +262,6 @@
     <div class="footer-bottom">© 2026 Om Glass Decor. All rights reserved.</div>
   </footer>
 
-  <!-- WHATSAPP -->
   <a href="https://wa.me/919784185252" target="_blank" class="whatsapp-float">
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 2C8.28 2 2 8.28 2 16c0 2.47.64 4.79 1.76 6.81L2 30l7.39-1.71A13.93 13.93 0 0 0 16.004 30C23.72 30 30 23.72 30 16S23.72 2 16.004 2z" fill="#fff"/><path d="M21.66 18.14c-.23-.12-1.38-.68-1.6-.76-.21-.08-.37-.12-.53.12-.16.24-.61.76-.75.92-.14.16-.28.18-.51.06-.23-.12-1-.37-1.91-1.18-.71-.63-1.18-1.41-1.32-1.65-.14-.24-.02-.37.1-.49.11-.11.23-.28.35-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.27-.72-1.74-.19-.46-.38-.4-.53-.4h-.45c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.57.18 1.09.15 1.5.09.46-.07 1.38-.56 1.58-1.11.2-.55.2-1.02.14-1.11-.06-.09-.22-.15-.45-.27z" fill="#fff"/></svg>
   </a>
@@ -283,7 +275,6 @@
       const w = document.getElementById('qWidth').value || "0";
       const q = document.getElementById('qQty').value || "1";
       const service = document.getElementById('qService').value;
-      
       const success = document.getElementById('formSuccess');
       
       if(phone.length !== 10) { alert("Enter valid 10-digit mobile number"); return; }
