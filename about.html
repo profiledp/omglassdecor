@@ -1,79 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Us | Om Glass Decor</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231a1a1a'/><text x='50' y='68' font-size='40' font-family='Arial' fill='%23c0c0c0' text-anchor='middle' font-weight='bold'>OG</text></svg>">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root { --bg-light: #f5f5f7; --text-dark: #1a1a1a; --muted: #888888; --accent: #c0c0c0; --whatsapp: #25D366; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-light); color: var(--text-dark); }
+    a { text-decoration: none; color: inherit; }
+    .site-header { background: #fff; padding: 15px 7%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark { width: 45px; height: 45px; background: var(--text-dark); color: #fff; display: grid; place-items: center; font-weight: bold; border: 2px solid var(--accent); border-radius: 4px; }
+    .brand strong { display: block; font-size: 16px; }
+    .brand small { display: block; font-size: 9px; color: var(--muted); }
+    .header-nav { display: flex; gap: 20px; }
+    .header-nav a { font-size: 14px; font-weight: 600; color: #555; }
+    .header-nav a.active { color: var(--text-dark); }
+    .header-wa { background: var(--text-dark); color: #fff; padding: 10px 20px; border-radius: 4px; font-size: 13px; font-weight: bold; }
+    .page-header { background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); color: #fff; padding: 70px 7% 50px; text-align: center; }
+    .page-header h1 { font-family: 'Georgia', serif; font-size: 42px; color: var(--accent); }
+    .content-wrap { max-width: 900px; margin: 0 auto; padding: 70px 7%; }
+    .content-wrap h2 { font-family: 'Georgia', serif; font-size: 32px; margin-bottom: 20px; }
+    .content-wrap p { font-size: 16px; color: #555; line-height: 1.9; margin-bottom: 15px; }
+    .site-footer { background: var(--text-dark); color: #aaa; padding: 60px 7% 20px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
+    .footer-grid h3, .footer-grid h4 { color: #fff; margin-bottom: 15px; }
+    .footer-grid p, .footer-grid a { font-size: 13px; line-height: 2; display: block; color: #aaa; }
+    .footer-bottom { text-align: center; border-top: 1px solid #333; padding-top: 20px; font-size: 12px; }
+    @media (max-width: 900px) { .header-nav { display: none; } }
+  </style>
 </head>
 <body>
 
   <header class="site-header">
-    <a href="index.html" class="brand">
-      <span class="brand-mark">OG</span>
-      <span><strong>OM GLASS DECOR</strong><small>SINCE 1986 · UDAIPUR</small></span>
-    </a>
-    <div class="header-nav">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html" class="active">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <a href="https://wa.me/919784185252?text=Hello%20Om%20Glass%20Decor" target="_blank" class="header-wa">📞 Enquire Now</a>
+    <a href="index.html" class="brand"><span class="brand-mark">OG</span><span><strong>OM GLASS DECOR</strong><small>SINCE 1986 · UDAIPUR</small></span></a>
+    <div class="header-nav"><a href="index.html">Home</a><a href="products.html">Products</a><a href="price-list.html">Price List</a><a href="gallery.html">Gallery</a><a href="about.html" class="active">About</a><a href="contact.html">Contact</a></div>
+    <a href="https://wa.me/919784185252" target="_blank" class="header-wa">📞 Enquire Now</a>
   </header>
 
   <section class="page-header">
-    <span class="eyebrow">OUR STORY</span>
     <h1>About Us</h1>
-    <p>Building trust through quality glass since 1986.</p>
   </section>
 
   <div class="content-wrap">
     <h2>38+ Years of Excellence</h2>
     <p>Established in 1986, <strong>Om Glass Decor</strong> has been a pioneer in the glass industry in Udaipur. What started as a small glass shop has now grown into one of the most trusted names for premium glass and mirror solutions in the city.</p>
-    
     <p>We take pride in our craftsmanship, our attention to detail, and our commitment to delivering the highest quality products to our customers. Whether it's a simple bathroom mirror or a large-scale architectural glass installation, we treat every project with the same passion and precision.</p>
-
-    <h2 style="margin-top: 40px;">Our Mission</h2>
+    <h2>Our Mission</h2>
     <p>To enhance the beauty and functionality of every space with premium, safe, and durable glass solutions. We aim to provide our customers with the best-in-class service, from consultation to installation.</p>
-
-    <h2 style="margin-top: 40px;">Why Trust Us?</h2>
+    <h2>Why Trust Us?</h2>
     <p>Over the years, we have built a strong reputation based on:</p>
-    <p>✔ 38+ years of experience in glass fabrication<br>
-       ✔ Premium quality raw materials<br>
-       ✔ Custom-designed solutions for every client<br>
-       ✔ Timely project completion<br>
-       ✔ After-sales support and maintenance</p>
+    <p>✔ 38+ years of experience in glass fabrication<br>✔ Premium quality raw materials<br>✔ Custom-designed solutions for every client<br>✔ Timely project completion<br>✔ After-sales support and maintenance</p>
   </div>
 
   <footer class="site-footer">
     <div class="footer-grid">
-      <div>
-        <h3>OM GLASS DECOR</h3>
-        <p>Premium Glass & Mirror solutions in Udaipur. Serving elegance since 1986.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div>
-        <h4>Contact Us</h4>
-        <a href="tel:+919784185252">📞 +91 97841 85252</a>
-        <a href="https://wa.me/919784185252" target="_blank">💬 WhatsApp</a>
-        <p>📍 Udaipur, Rajasthan</p>
-      </div>
+      <div><h3>OM GLASS DECOR</h3><p>Premium Glass solutions since 1986.</p></div>
+      <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="products.html">Products</a><a href="price-list.html">Price List</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="policy.html">Policies</a><a href="contact.html">Contact</a></div>
+      <div><h4>Contact</h4><a href="tel:+919784185252">📞 +91 97841 85252</a><p>📍 Udaipur, Rajasthan</p></div>
     </div>
-    <div class="footer-bottom">© 2026 Om Glass Decor. All rights reserved.</div>
+    <div class="footer-bottom">© 2026 Om Glass Decor.</div>
   </footer>
-
-  <a href="https://wa.me/919784185252" target="_blank" class="whatsapp-float">
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 2C8.28 2 2 8.28 2 16c0 2.47.64 4.79 1.76 6.81L2 30l7.39-1.71A13.93 13.93 0 0 0 16.004 30C23.72 30 30 23.72 30 16S23.72 2 16.004 2z" fill="#fff"/><path d="M21.66 18.14c-.23-.12-1.38-.68-1.6-.76-.21-.08-.37-.12-.53.12-.16.24-.61.76-.75.92-.14.16-.28.18-.51.06-.23-.12-1-.37-1.91-1.18-.71-.63-1.18-1.41-1.32-1.65-.14-.24-.02-.37.1-.49.11-.11.23-.28.35-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.27-.72-1.74-.19-.46-.38-.4-.53-.4h-.45c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.57.18 1.09.15 1.5.09.46-.07 1.38-.56 1.58-1.11.2-.55.2-1.02.14-1.11-.06-.09-.22-.15-.45-.27z" fill="#fff"/></svg>
-  </a>
 </body>
 </html>
