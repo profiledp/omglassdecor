@@ -69,6 +69,35 @@
     </div>
   </section>
 
+  <!-- NAYA: Quote Form on Contact Page -->
+  <section class="quote-section" style="background: #fff; padding-top: 0;">
+    <div class="quote-wrapper" style="box-shadow: none; border: 1px solid #eee;">
+      <h2>Request a Callback</h2>
+      <p>Prefer us to call you? Fill this form and we'll get in touch.</p>
+      <form action="https://formspree.io/f/xrgvzqkn" method="POST">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" name="phone" placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+          <label>What do you need?</label>
+          <select name="requirement">
+            <option value="LED Mirror">Smart LED Mirror</option>
+            <option value="Glass Partition">Glass Partition / Blocks</option>
+            <option value="Toughened Glass">Toughened Glass / Railing</option>
+            <option value="Shower Enclosure">Shower Glass Enclosure</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit-btn">📩 Request Callback</button>
+      </form>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
