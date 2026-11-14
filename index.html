@@ -3,147 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Om Glass Decor | Premium Glass Solutions in Udaipur</title>
-  <meta name="description" content="Om Glass Decor - Udaipur's trusted glass decorators since 2005. Toughened Glass, LED Mirrors, Glass Partitions.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230066cc'/><text x='50' y='68' font-size='40' font-family='Arial' fill='%23ffffff' text-anchor='middle' font-weight='bold'>OG</text></svg>">
+  <title>Om Glass Decor | Royal Glass Solutions in Udaipur</title>
+  <meta name="description" content="Om Glass Decor - Udaipur's premium glass decorators since 2005. Toughened Glass, LED Mirrors, Custom Partitions.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a192f'/><text x='50' y='68' font-size='40' font-family='Georgia' fill='%23d4af37' text-anchor='middle' font-weight='bold'>OG</text></svg>">
   
+  <!-- Google Fonts for Royal Look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0066cc">
+  <meta name="theme-color" content="#0a192f">
   
   <style>
     :root {
-      --primary-blue: #0066cc;
-      --text-dark: #222222;
-      --text-light: #666666;
-      --bg-light: #f8f9fa;
-      --gold: #f1c40f;
+      --navy: #0a192f;
+      --gold: #d4af37;
+      --cream: #f8f5f0;
+      --text-dark: #1a1a1a;
+      --text-light: #555555;
+      --white: #ffffff;
       --whatsapp: #25D366;
-      --border: #eaeaea;
+      --border: #e5e5e5;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: var(--text-dark); scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Lato', sans-serif; background: var(--white); color: var(--text-dark); scroll-behavior: smooth; overflow-x: hidden; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
 
-    /* --- HEADER --- */
-    .site-header { background: #fff; padding: 15px 7%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    /* --- CLASSIC HEADER --- */
+    .site-header { background: var(--white); padding: 15px 7%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-bottom: 1px solid var(--border); }
     .brand { display: flex; align-items: center; gap: 15px; }
     
-    /* ✅ NAYA: Shop Image as Logo */
     .brand-mark { 
-      width: 55px; height: 55px; 
+      width: 60px; height: 60px; 
       border-radius: 50%; 
       overflow: hidden; 
-      border: 2px solid var(--primary-blue); 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border: 2px solid var(--gold); 
+      box-shadow: 0 4px 10px rgba(10,25,47,0.1);
       background: #fff;
       flex-shrink: 0;
     }
-    .brand-mark img {
-      width: 100%; height: 100%; object-fit: cover;
-    }
+    .brand-mark img { width: 100%; height: 100%; object-fit: cover; }
 
-    .brand strong { display: block; font-size: 22px; letter-spacing: 0.5px; color: var(--text-dark); font-weight: 800; line-height: 1; }
-    .brand small { display: block; font-size: 10px; color: var(--primary-blue); letter-spacing: 2px; margin-top: 4px; text-transform: uppercase; font-weight: bold; }
+    .brand strong { display: block; font-family: 'Cinzel', serif; font-size: 24px; letter-spacing: 1px; color: var(--navy); font-weight: 700; line-height: 1; }
+    .brand small { display: block; font-size: 10px; color: var(--gold); letter-spacing: 3px; margin-top: 5px; text-transform: uppercase; font-weight: 700; }
     
-    .header-nav { display: flex; gap: 25px; }
-    .header-nav a { font-size: 13px; font-weight: 600; color: var(--text-dark); text-transform: uppercase; transition: color 0.2s; }
-    .header-nav a:hover, .header-nav a.active { color: var(--primary-blue); }
+    .header-nav { display: flex; gap: 30px; }
+    .header-nav a { font-size: 13px; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; position: relative; }
+    .header-nav a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--gold); transition: 0.3s; }
+    .header-nav a:hover::after, .header-nav a.active::after { width: 100%; }
+    .header-nav a:hover, .header-nav a.active { color: var(--navy); }
 
-    /* --- HERO (Using Shop Image) --- */
+    /* --- ROYAL HERO --- */
     .hero { 
       position: relative; 
-      height: 85vh; 
-      min-height: 550px; 
+      height: 90vh; 
+      min-height: 600px; 
       display: flex; 
       align-items: center; 
       justify-content: center; 
       text-align: center; 
       
-      /* Shop Image as Hero Background */
       background-image: url('shop-image.jpg');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
     }
-    .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: 1; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,25,47,0.7), rgba(10,25,47,0.9)); z-index: 1; }
     
-    .hero-content { position: relative; z-index: 2; color: #fff; max-width: 800px; padding: 0 20px; }
-    .hero-content h1 { font-size: clamp(32px, 5vw, 58px); font-weight: 700; margin-bottom: 30px; text-shadow: 0 2px 10px rgba(0,0,0,0.6); line-height: 1.2; }
-    .hero-content .btn-hero { 
-      background: var(--gold); color: #222; padding: 16px 45px; border-radius: 30px; 
-      font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; 
-      display: inline-block; transition: 0.3s; border: none; cursor: pointer;
-      box-shadow: 0 4px 15px rgba(241,196,15,0.4);
+    .hero-content { position: relative; z-index: 2; color: var(--white); max-width: 900px; padding: 0 20px; }
+    .hero-content h1 { font-size: clamp(36px, 5vw, 65px); font-weight: 400; margin-bottom: 25px; line-height: 1.2; font-style: italic; }
+    .hero-content h1 span { color: var(--gold); font-weight: 700; font-style: normal; }
+    
+    .hero-content p { font-size: 16px; color: #d1d5db; letter-spacing: 1px; margin-bottom: 40px; line-height: 1.8; font-weight: 300; }
+    
+    .btn-hero { 
+      background: transparent; color: var(--gold); padding: 15px 45px; 
+      border: 1px solid var(--gold); border-radius: 0; 
+      font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; 
+      display: inline-block; transition: 0.4s; cursor: pointer;
     }
-    .hero-content .btn-hero:hover { background: #e0b000; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(241,196,15,0.6); }
+    .btn-hero:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); }
 
     /* --- FEATURED CATEGORIES --- */
-    .featured-section { padding: 70px 7%; background: var(--bg-light); text-align: center; }
-    .section-title { font-size: 28px; font-weight: 600; color: var(--text-dark); margin-bottom: 40px; }
+    .featured-section { padding: 100px 7%; background: var(--white); text-align: center; }
+    .section-title { font-size: 36px; font-weight: 700; color: var(--navy); margin-bottom: 15px; }
+    .section-subtitle { font-size: 14px; color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-weight: 700; margin-bottom: 50px; display: block; }
     
-    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .cat-card { background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: 0.3s; cursor: pointer; }
-    .cat-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-    .cat-img { width: 100%; height: 180px; overflow: hidden; background: #fff; display: flex; align-items: center; justify-content: center; }
-    .cat-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
-    .cat-card:hover .cat-img img { transform: scale(1.05); }
-    .cat-title { padding: 15px; font-weight: 600; color: var(--primary-blue); font-size: 15px; background: #fff; border-top: 1px solid var(--border); }
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+    .cat-card { background: var(--white); border: 1px solid var(--border); padding: 15px; transition: 0.4s; cursor: pointer; position: relative; }
+    .cat-card::before { content: ''; position: absolute; inset: 0; border: 2px solid transparent; transition: 0.4s; pointer-events: none; }
+    .cat-card:hover::before { border-color: var(--gold); inset: 10px; }
+    .cat-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(10,25,47,0.1); }
+    
+    .cat-img { width: 100%; height: 220px; overflow: hidden; margin-bottom: 20px; }
+    .cat-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+    .cat-card:hover .cat-img img { transform: scale(1.08); }
+    .cat-title { font-size: 20px; font-weight: 700; color: var(--navy); }
 
-    /* --- ABOUT (Using Shop Image) --- */
-    .about-section { padding: 80px 7%; background: #fff; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
-    .about-image { flex: 1; min-width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    /* --- ABOUT --- */
+    .about-section { padding: 100px 7%; background: var(--cream); display: flex; flex-wrap: wrap; gap: 60px; align-items: center; }
+    .about-image { flex: 1; min-width: 350px; border-radius: 0; overflow: hidden; box-shadow: 20px 20px 0px rgba(212,175,55,0.2); border: 1px solid var(--gold); }
     .about-image img { width: 100%; height: auto; object-fit: cover; }
     
-    .about-content { flex: 1; min-width: 300px; }
-    .about-content .eyebrow { font-size: 12px; color: var(--primary-blue); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
-    .about-content h2 { font-size: 32px; font-weight: 700; color: var(--text-dark); margin-bottom: 20px; line-height: 1.3; }
-    .about-content p { font-size: 15px; color: var(--text-light); line-height: 1.8; margin-bottom: 25px; }
-    .check-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
-    .check-item { font-size: 14px; font-weight: 600; color: var(--text-dark); display: flex; align-items: center; gap: 8px; }
-    .check-item::before { content: '✔'; color: var(--primary-blue); font-size: 16px; }
+    .about-content { flex: 1; min-width: 350px; }
+    .about-content .eyebrow { font-size: 13px; color: var(--gold); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; display: block; }
+    .about-content h2 { font-size: 40px; font-weight: 700; color: var(--navy); margin-bottom: 25px; line-height: 1.2; }
+    .about-content p { font-size: 16px; color: var(--text-light); line-height: 1.9; margin-bottom: 25px; font-weight: 300; }
+    
+    .address-box { border-left: 3px solid var(--gold); padding-left: 20px; margin-bottom: 30px; }
+    .address-box p { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 5px; line-height: 1.6; }
+    
+    .check-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 35px; }
+    .check-item { font-size: 15px; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: 10px; }
+    .check-item::before { content: '✦'; color: var(--gold); font-size: 18px; }
 
     /* --- CONTACT --- */
-    .contact-section { padding: 80px 7%; background: var(--bg-light); text-align: center; }
-    .contact-box { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
-    .contact-box h2 { font-size: 24px; margin-bottom: 20px; text-align: center; color: var(--text-dark); }
-    .form-group { margin-bottom: 15px; }
-    .form-group label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 5px; color: var(--text-light); }
-    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; font-size: 14px; outline: none; }
-    .form-group input:focus { border-color: var(--primary-blue); }
-    .btn-submit { width: 100%; padding: 15px; background: var(--primary-blue); color: #fff; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.3s; }
-    .btn-submit:hover { background: #004c99; }
-    .form-success { display: none; background: #d4edda; color: #155724; padding: 12px; border-radius: 4px; font-size: 14px; font-weight: bold; margin-bottom: 15px; border: 1px solid #c3e6cb; text-align: center; }
+    .contact-section { padding: 100px 7%; background: var(--white); text-align: center; }
+    .contact-box { max-width: 650px; margin: 0 auto; background: var(--cream); padding: 50px; border: 1px solid var(--border); box-shadow: 0 20px 50px rgba(10,25,47,0.05); text-align: left; position: relative; }
+    .contact-box::before { content: ''; position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px; border: 1px solid rgba(212,175,55,0.3); pointer-events: none; }
+    
+    .contact-box h2 { font-size: 30px; margin-bottom: 10px; text-align: center; color: var(--navy); font-weight: 700; }
+    .contact-box > p { text-align: center; color: var(--text-light); margin-bottom: 30px; font-size: 14px; }
+    
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 700; margin-bottom: 8px; color: var(--navy); text-transform: uppercase; letter-spacing: 1px; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px; border: 1px solid #ccc; border-radius: 0; font-family: inherit; font-size: 14px; outline: none; background: #fff; transition: 0.3s; }
+    .form-group input:focus, .form-group select:focus { border-color: var(--gold); }
+    
+    .btn-submit { width: 100%; padding: 16px; background: var(--navy); color: var(--gold); border: 1px solid var(--navy); border-radius: 0; font-size: 14px; font-weight: 700; cursor: pointer; margin-top: 10px; transition: 0.4s; text-transform: uppercase; letter-spacing: 1px; }
+    .btn-submit:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+    .form-success { display: none; background: #dcfce7; color: #166534; padding: 12px; border-radius: 0; font-size: 14px; font-weight: bold; margin-bottom: 20px; border: 1px solid #86efac; text-align: center; }
 
     /* --- FOOTER --- */
-    .site-footer { background: #222; color: #aaa; padding: 60px 7% 20px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto 40px; }
-    .footer-grid h3 { color: #fff; margin-bottom: 20px; font-size: 16px; border-bottom: 2px solid var(--primary-blue); padding-bottom: 10px; display: inline-block; }
-    .footer-grid p, .footer-grid a { font-size: 13px; line-height: 2; display: block; color: #aaa; }
-    .footer-grid a:hover { color: #fff; }
-    .footer-bottom { text-align: center; border-top: 1px solid #444; padding-top: 20px; font-size: 12px; }
+    .site-footer { background: var(--navy); color: #8892b0; padding: 80px 7% 30px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 50px; }
+    .footer-grid h3 { color: var(--white); margin-bottom: 25px; font-size: 20px; font-weight: 700; }
+    .footer-grid h3 span { color: var(--gold); }
+    .footer-grid p, .footer-grid a { font-size: 14px; line-height: 2.2; display: block; color: #8892b0; font-weight: 300; transition: 0.3s; }
+    .footer-grid a:hover { color: var(--gold); }
+    .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; font-size: 13px; }
 
     /* --- WHATSAPP --- */
-    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(37,211,102,0.4); z-index: 1000; animation: pulse 2s infinite; }
+    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(37,211,102,0.4); z-index: 1000; animation: pulse 2s infinite; transition: transform 0.3s; }
+    .whatsapp-float:hover { transform: scale(1.1); }
     .whatsapp-float svg { width: 34px; height: 34px; }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); } 70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
 
     /* --- RESPONSIVE --- */
     @media (max-width: 900px) {
       .header-nav { display: none; }
+      .hero { min-height: 500px; }
+      .hero-content h1 { font-size: 42px; }
     }
     @media (max-width: 650px) {
       .site-header { padding: 15px 5%; }
-      .brand strong { font-size: 18px; }
+      .brand strong { font-size: 20px; }
       .brand small { font-size: 8px; }
-      .brand-mark { width: 45px; height: 45px; }
-      .featured-section { padding: 50px 5%; }
-      .about-section { padding: 50px 5%; }
-      .contact-section { padding: 50px 5%; }
-      .contact-box { padding: 25px; }
-      .cat-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .cat-img { height: 130px; }
-      .cat-title { font-size: 12px; padding: 10px; }
+      .brand-mark { width: 50px; height: 50px; }
+      .featured-section { padding: 60px 5%; }
+      .about-section { padding: 60px 5%; }
+      .contact-section { padding: 60px 5%; }
+      .contact-box { padding: 30px 20px; }
+      .cat-grid { grid-template-columns: 1fr; }
+      .cat-img { height: 250px; }
       .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
     }
   </style>
@@ -167,17 +192,19 @@
     </div>
   </header>
 
-  <!-- HERO (Shop Image Background) -->
+  <!-- ROYAL HERO -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Exclusive Range of<br>Toughened Glass</h1>
-      <a href="products.html" class="btn-hero">Read More</a>
+      <h1>Exclusive Range of <br><span>Toughened Glass</span></h1>
+      <p>Crafting elegance and durability for Udaipur's finest spaces since 2005.</p>
+      <a href="products.html" class="btn-hero">Explore Collection</a>
     </div>
   </section>
 
   <!-- FEATURED CATEGORIES -->
   <section class="featured-section">
+    <span class="section-subtitle">Our Expertise</span>
     <h2 class="section-title">Featured Categories</h2>
     <div class="cat-grid">
       <a href="products.html" class="cat-card">
@@ -199,39 +226,41 @@
     </div>
   </section>
 
-  <!-- ABOUT (Shop Image Display) -->
+  <!-- ABOUT -->
   <section class="about-section">
     <div class="about-image">
       <img src="shop-image.jpg" alt="Om Glass Decor Shop Front">
     </div>
     <div class="about-content">
-      <span class="eyebrow">Since 2005</span>
+      <span class="eyebrow">The Royal Legacy</span>
       <h2>Udaipur's Most Trusted Glass Experts</h2>
       <p>Om Glass Decor has been serving the city with premium quality glass solutions for nearly two decades. From residential complexes to commercial buildings, our glass speaks for itself.</p>
-      <p style="font-size:13px; font-weight:bold; color:var(--primary-blue); margin-bottom:20px;">
-        📍 20 Hari Shyam Vihar, Vikramaditya Chouraha, Gandhi Nagar, Kalka Mata Road, Main Road, Near Shiv Mandir, Udaipur, Rajasthan 313001
-      </p>
+      
+      <div class="address-box">
+        <p>📍 20 Hari Shyam Vihar, Vikramaditya Chouraha, Gandhi Nagar, Kalka Mata Road, Near Shiv Mandir, Udaipur - 313001</p>
+      </div>
+      
       <div class="check-list">
         <div class="check-item">ISO Certified Materials</div>
         <div class="check-item">Expert Installation</div>
         <div class="check-item">Custom Designs</div>
         <div class="check-item">Free Site Visit</div>
       </div>
-      <a href="about.html" class="btn-hero" style="background:var(--primary-blue); color:#fff;">Learn More</a>
+      <a href="about.html" class="btn-hero" style="color:var(--navy); border-color:var(--navy);">Learn More</a>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact-section" id="contact">
-    <h2 style="font-size:32px; margin-bottom:10px;">Get a Quote</h2>
-    <p style="color:var(--text-light); margin-bottom:30px;">Fill the form below to get a quick price estimate.</p>
+    <span class="section-subtitle">Get In Touch</span>
+    <h2 class="section-title" style="margin-bottom:40px;">Request a Quote</h2>
     
     <div class="contact-box">
       <div id="formSuccess" class="form-success">✅ Thank you! Redirecting to WhatsApp...</div>
       <form id="quoteForm">
         <div class="form-group"><label>Your Name *</label><input type="text" id="qName" placeholder="Enter name" required></div>
         <div class="form-group"><label>Phone Number *</label><input type="tel" id="qPhone" placeholder="Enter 10-digit number" required></div>
-        <div class="form-group" style="display:flex; gap:10px;">
+        <div class="form-group" style="display:flex; gap:15px;">
           <div style="flex:1;"><label>Height (ft)</label><input type="number" id="qHeight" placeholder="6"></div>
           <div style="flex:1;"><label>Width (ft)</label><input type="number" id="qWidth" placeholder="3"></div>
           <div style="flex:1;"><label>Qty</label><input type="number" id="qQty" placeholder="1"></div>
@@ -255,15 +284,15 @@
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
-        <h3>Om Glass Decor</h3>
+        <h3>Om <span>Glass Decor</span></h3>
         <p>Premium glass manufacturing and installation in Udaipur since 2005. Quality, durability, and elegance in every piece.</p>
       </div>
       <div>
-        <h3>Quick Links</h3>
+        <h3>Quick <span>Links</span></h3>
         <a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a><a href="contact.html">Contact</a>
       </div>
       <div>
-        <h3>Contact</h3>
+        <h3>Contact <span>Us</span></h3>
         <p>📍 20 Hari Shyam Vihar, Vikramaditya Chouraha, Gandhi Nagar, Udaipur - 313001</p>
         <p>📞 +91 97841 85252</p>
         <p>📧 info@omglassdecor.com</p>
