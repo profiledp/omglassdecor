@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Om Glass Decor | Premium Glass & Mirrors in Udaipur</title>
-  <meta name="description" content="Udaipur's trusted glass decorators since 2005. LED Mirrors, Glass Blocks, Toughened Glass, Custom Partitions.">
+  <meta name="description" content="Udaipur's trusted glass decorators since 1986. LED Mirrors, Glass Blocks, Toughened Glass, Custom Partitions.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231a1a1a'/><text x='50' y='68' font-size='40' font-family='Arial' fill='%23c0c0c0' text-anchor='middle' font-weight='bold'>OG</text></svg>">
   
-  <!-- PWA Setup -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#1a1a1a">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -56,6 +55,70 @@
     .trust-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: bold; color: #444; }
     .trust-item span { font-size: 18px; }
 
+    /* SECTIONS COMMON */
+    .section-heading { margin-bottom: 40px; text-align: center; }
+    .section-heading h2 { font-family: 'Georgia', serif; font-size: 32px; color: var(--text-dark); margin-top: 5px; }
+    .section-heading p { color: var(--muted); font-size: 14px; margin-top: 8px; }
+
+    /* GLASS SHOWCASE (NAYA CLASSIC SECTION) */
+    .showcase-section { padding: 80px 7%; background: #fff; }
+    .showcase-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; max-width: 1200px; margin: 0 auto; }
+    .showcase-item { position: relative; border-radius: 12px; overflow: hidden; cursor: pointer; aspect-ratio: 1/1; }
+    .showcase-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+    .showcase-item:hover img { transform: scale(1.1); }
+    .showcase-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 50%); display: flex; align-items: flex-end; padding: 25px; color: #fff; }
+    .showcase-overlay h3 { font-family: 'Georgia', serif; font-size: 20px; margin: 0; }
+    .showcase-overlay p { font-size: 12px; color: #ddd; margin: 4px 0 0; }
+    /* Image 1 (Big) */
+    .showcase-item.big { grid-column: span 1; grid-row: span 2; }
+    .showcase-item.big img { object-fit: cover; }
+    
+    @media (max-width: 900px) {
+      .showcase-grid { grid-template-columns: 1fr 1fr; }
+      .showcase-item.big { grid-column: span 2; grid-row: span 1; }
+    }
+    @media (max-width: 650px) {
+      .showcase-grid { grid-template-columns: 1fr; }
+      .showcase-item.big { grid-column: span 1; }
+    }
+
+    /* PRODUCTS */
+    .products-section { padding: 80px 7%; background: var(--bg-light); }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .product-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.03); border: 1px solid #f0f0f0; transition: transform 0.3s; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); border-color: var(--accent); }
+    .product-img-wrap { position: relative; width: 100%; height: 250px; overflow: hidden; background: #f4f4f4; }
+    .product-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .product-card:hover .product-img-wrap img { transform: scale(1.05); }
+    .product-tag { position: absolute; top: 10px; left: 10px; background: var(--gold); color: var(--text-dark); font-size: 10px; font-weight: bold; padding: 4px 10px; border-radius: 3px; }
+    .product-info { padding: 20px; }
+    .product-info h3 { font-size: 18px; margin-bottom: 8px; color: var(--text-dark); }
+    .product-info p { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 15px; }
+    .enquire-btn { display: block; text-align: center; background: #f0f0f0; color: var(--text-dark); padding: 10px; border-radius: 6px; font-size: 13px; font-weight: bold; transition: 0.3s; }
+    .enquire-btn:hover { background: var(--whatsapp); color: #fff; }
+
+    /* PROCESS */
+    .process-section { padding: 80px 7%; background: #fff; }
+    .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 50px; }
+    .process-step { text-align: center; padding: 25px 20px; background: #fff; border-radius: 12px; cursor: pointer; transition: all 0.3s; border: 1px solid #eee; }
+    .process-step:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); border-color: var(--gold); }
+    .process-icon { width: 70px; height: 70px; background: #f4f4f4; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 20px; border: 2px solid var(--border); transition: 0.3s; }
+    .process-step:hover .process-icon { background: var(--text-dark); color: #fff; border-color: var(--text-dark); transform: scale(1.1); }
+    .process-step h3 { font-size: 18px; margin-bottom: 8px; }
+    .process-step p { font-size: 13px; color: var(--muted); }
+
+    /* MODAL */
+    .custom-modal-overlay { position: fixed; inset: 0; background: rgba(10,10,12,0.85); backdrop-filter: blur(6px); z-index: 9999; display: none; align-items: center; justify-content: center; padding: 20px; }
+    .custom-modal-overlay.active { display: flex; }
+    .custom-modal-box { background: #fff; border-radius: 16px; max-width: 550px; width: 100%; padding: 40px 35px; position: relative; max-height: 85vh; overflow-y: auto; }
+    .modal-close-btn { position: absolute; top: 15px; right: 15px; background: #f0f0f0; border: none; width: 35px; height: 35px; border-radius: 50%; font-size: 20px; cursor: pointer; }
+    .modal-icon-big { font-size: 60px; margin-bottom: 15px; display: block; }
+    .modal-title { font-family: 'Georgia', serif; font-size: 26px; color: var(--text-dark); margin-bottom: 15px; border-bottom: 2px solid var(--gold); padding-bottom: 10px; display: inline-block; }
+    .modal-desc { font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 15px; }
+    .modal-list { padding-left: 20px; margin-bottom: 15px; }
+    .modal-list li { font-size: 14px; color: #444; line-height: 1.8; margin-bottom: 6px; }
+    .modal-timeline { background: #f8f9fa; border-left: 4px solid var(--gold); padding: 15px; border-radius: 6px; margin-top: 15px; }
+
     /* QUOTE SECTION */
     .quote-section { padding: 80px 7%; background: var(--bg-light); position: relative; }
     .quote-split-wrapper { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid #eee; }
@@ -81,65 +144,17 @@
     .btn-whatsapp-small { display: inline-flex; align-items: center; gap: 8px; background: var(--whatsapp); color: #fff; padding: 10px 18px; border-radius: 6px; font-size: 13px; font-weight: bold; margin-top: 15px; transition: 0.3s; }
     .btn-whatsapp-small:hover { background: #128C7E; }
 
-    /* SECTIONS */
-    .section-heading { margin-bottom: 40px; text-align: center; }
-    .section-heading h2 { font-family: 'Georgia', serif; font-size: 32px; color: var(--text-dark); margin-top: 5px; }
-    .section-heading p { color: var(--muted); font-size: 14px; margin-top: 8px; }
-
-    /* PRODUCTS */
-    .products-section { padding: 80px 7%; background: #fff; }
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-    .product-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.03); border: 1px solid #f0f0f0; transition: transform 0.3s; }
-    .product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); border-color: var(--accent); }
-    .product-img-wrap { position: relative; width: 100%; height: 250px; overflow: hidden; background: #f4f4f4; }
-    .product-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .product-card:hover .product-img-wrap img { transform: scale(1.05); }
-    .product-tag { position: absolute; top: 10px; left: 10px; background: var(--gold); color: var(--text-dark); font-size: 10px; font-weight: bold; padding: 4px 10px; border-radius: 3px; }
-    .product-info { padding: 20px; }
-    .product-info h3 { font-size: 18px; margin-bottom: 8px; color: var(--text-dark); }
-    .product-info p { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 15px; }
-    .enquire-btn { display: block; text-align: center; background: #f0f0f0; color: var(--text-dark); padding: 10px; border-radius: 6px; font-size: 13px; font-weight: bold; transition: 0.3s; }
-    .enquire-btn:hover { background: var(--whatsapp); color: #fff; }
-
-    /* PROCESS */
-    .process-section { padding: 80px 7%; background: var(--bg-light); }
-    .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 50px; }
-    .process-step { text-align: center; padding: 25px 20px; background: #fff; border-radius: 12px; cursor: pointer; transition: all 0.3s; border: 1px solid #eee; }
-    .process-step:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); border-color: var(--gold); }
-    .process-icon { width: 70px; height: 70px; background: #f4f4f4; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 20px; border: 2px solid var(--border); transition: 0.3s; }
-    .process-step:hover .process-icon { background: var(--text-dark); color: #fff; border-color: var(--text-dark); transform: scale(1.1); }
-    .process-step h3 { font-size: 18px; margin-bottom: 8px; }
-    .process-step p { font-size: 13px; color: var(--muted); }
-
-    /* MODAL */
-    .custom-modal-overlay { position: fixed; inset: 0; background: rgba(10,10,12,0.85); backdrop-filter: blur(6px); z-index: 9999; display: none; align-items: center; justify-content: center; padding: 20px; }
-    .custom-modal-overlay.active { display: flex; }
-    .custom-modal-box { background: #fff; border-radius: 16px; max-width: 550px; width: 100%; padding: 40px 35px; position: relative; max-height: 85vh; overflow-y: auto; }
-    .modal-close-btn { position: absolute; top: 15px; right: 15px; background: #f0f0f0; border: none; width: 35px; height: 35px; border-radius: 50%; font-size: 20px; cursor: pointer; }
-    .modal-icon-big { font-size: 60px; margin-bottom: 15px; display: block; }
-    .modal-title { font-family: 'Georgia', serif; font-size: 26px; color: var(--text-dark); margin-bottom: 15px; border-bottom: 2px solid var(--gold); padding-bottom: 10px; display: inline-block; }
-    .modal-desc { font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 15px; }
-    .modal-list { padding-left: 20px; margin-bottom: 15px; }
-    .modal-list li { font-size: 14px; color: #444; line-height: 1.8; margin-bottom: 6px; }
-    .modal-timeline { background: #f8f9fa; border-left: 4px solid var(--gold); padding: 15px; border-radius: 6px; margin-top: 15px; }
-
-    /* REVIEWS */
-    .reviews-section { padding: 80px 7%; background: #fff; }
-    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1000px; margin: 40px auto 0; }
-    .review-card { background: #fafafa; padding: 30px 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.02); text-align: left; border: 1px solid #f0f0f0; }
-    .review-stars { color: #fbbc04; font-size: 16px; margin-bottom: 12px; }
-    .review-text { font-size: 14px; color: #444; line-height: 1.7; font-style: italic; margin-bottom: 15px; }
-    .review-author { font-weight: bold; font-size: 13px; color: var(--text-dark); }
-
     /* FOOTER */
     .site-footer { background: var(--text-dark); color: #aaa; padding: 60px 7% 20px; }
     .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
     .footer-grid h3, .footer-grid h4 { color: #fff; margin-bottom: 15px; font-size: 16px; }
     .footer-grid p, .footer-grid a { font-size: 13px; line-height: 2; display: block; color: #aaa; }
+    .footer-grid a:hover { color: var(--accent); }
     .footer-bottom { text-align: center; border-top: 1px solid #333; padding-top: 20px; font-size: 12px; color: #666; }
 
-    /* WHATSAPP */
-    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(37,211,102,0.4); z-index: 1000; animation: pulse 2s infinite; }
+    /* WHATSAPP FLOAT */
+    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(37,211,102,0.4); z-index: 1000; animation: pulse 2s infinite; transition: transform 0.3s; }
+    .whatsapp-float:hover { transform: scale(1.1); }
     .whatsapp-float svg { width: 34px; height: 34px; }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); } 70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
 
@@ -175,7 +190,7 @@
   <header class="site-header">
     <a href="index.html" class="brand">
       <span class="brand-mark">OG</span>
-      <span><strong>OM GLASS DECOR</strong><small>SINCE 2005 · UDAIPUR</small></span>
+      <span><strong>OM GLASS DECOR</strong><small>SINCE 1986 · UDAIPUR</small></span>
     </a>
     <div class="header-nav">
       <a href="index.html" class="active">Home</a>
@@ -193,13 +208,13 @@
     <div class="hero-content">
       <span class="eyebrow">UDAIPUR'S PREMIUM GLASS STUDIO</span>
       <h1>Elevate Your Space<br>With Premium <em>Glass & Mirrors.</em></h1>
-      <p>Transform your home or office with Udaipur's most trusted glass experts. We specialize in Smart LED Mirrors, Toughened Glass, and Custom Partitions since 2005.</p>
+      <p>Transform your home or office with Udaipur's most trusted glass experts. We specialize in Smart LED Mirrors, Toughened Glass, and Custom Partitions since 1986.</p>
       <div class="hero-buttons">
         <a href="products.html" class="btn-primary">View Our Collection <span style="font-size: 18px;">→</span></a>
         <a href="#quote" class="btn-secondary">Get Free Quote</a>
       </div>
       <div class="hero-trust">
-        <span>✅ 22+ Years Experience</span>
+        <span>✅ 38+ Years Experience</span>
         <span>✅ 1000+ Happy Clients</span>
         <span>✅ Custom Designs</span>
       </div>
@@ -212,6 +227,37 @@
     <div class="trust-item"><span>🎨</span> Custom Designs</div>
     <div class="trust-item"><span>🛡️</span> 100% Safe & Durable</div>
   </div>
+
+  <!-- NAYA: GLASS SHOWCASE (Classic Collage Style) -->
+  <section class="showcase-section">
+    <div class="section-heading">
+      <span class="eyebrow">GLASS MASTERPIECES</span>
+      <h2>Crafted with Precision</h2>
+      <p>Explore our finest glass installations across Udaipur.</p>
+    </div>
+    <div class="showcase-grid">
+      <div class="showcase-item big">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="Premium Glass Partition">
+        <div class="showcase-overlay"><h3>Premium Glass Partitions</h3><p>Office & Residential</p></div>
+      </div>
+      <div class="showcase-item">
+        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=600&q=80" alt="LED Mirror">
+        <div class="showcase-overlay"><h3>LED Smart Mirrors</h3><p>Bathroom Luxury</p></div>
+      </div>
+      <div class="showcase-item">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Toughened Glass Railing">
+        <div class="showcase-overlay"><h3>Glass Railings</h3><p>Modern & Safe</p></div>
+      </div>
+      <div class="showcase-item">
+        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80" alt="Shower Enclosure">
+        <div class="showcase-overlay"><h3>Shower Enclosures</h3><p>Frameless Design</p></div>
+      </div>
+      <div class="showcase-item">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80" alt="Decorative Glass Wall">
+        <div class="showcase-overlay"><h3>Decorative Walls</h3><p>Beautiful Textures</p></div>
+      </div>
+    </div>
+  </section>
 
   <section class="products-section">
     <div class="section-heading">
@@ -294,7 +340,7 @@
         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Showroom" class="shop-image">
         <div class="shop-info-box">
           <h3>Visit Our Showroom</h3>
-          <div class="info-item"><span>📍</span><p>20 Hari shyam vihar Vikramaditya chouraha Gandhi nagar kalka mata road, main Road, near shiv mandir, Udaipur, Rajasthan 313001</p></div>
+          <div class="info-item"><span>📍</span><p>3-A, Shiv Chowk, Kalka Mata Road, Pahada, Udaipur, Rajasthan - 313001</p></div>
           <div class="info-item"><span>📞</span><p><a href="tel:+919784185252">+91 97841 85252</a></p></div>
           <a href="https://wa.me/919784185252" target="_blank" class="btn-whatsapp-small">💬 Chat on WhatsApp</a>
         </div>
@@ -304,8 +350,8 @@
 
   <footer class="site-footer">
     <div class="footer-grid">
-      <div><h3>OM GLASS DECOR</h3><p>Premium Glass & Mirror solutions in Udaipur. Serving elegance since 2005.</p></div>
-      <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="products.html">Products</a><a href="price-list.html">Price List & Rates</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="policy.html">Policies</a><a href="contact.html">Contact</a></div>
+      <div><h3>OM GLASS DECOR</h3><p>Premium Glass & Mirror solutions in Udaipur. Serving elegance since 1986.</p></div>
+      <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="products.html">Products</a><a href="price-list.html">💰 Price List & Rates</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="policy.html">📜 Policies</a><a href="contact.html">Contact</a></div>
       <div><h4>Contact Us</h4><a href="tel:+919784185252">📞 +91 97841 85252</a><a href="https://wa.me/919784185252" target="_blank">💬 WhatsApp</a><p>📍 Udaipur, Rajasthan</p></div>
     </div>
     <div class="footer-bottom">© 2026 Om Glass Decor. All rights reserved.</div>
@@ -316,7 +362,6 @@
   </a>
 
   <script>
-    // Process Modal Data
     const processData = {
       1: { icon: "📏", title: "Site Visit & Measurement", desc: "Our expert team visits your location to take precise measurements.", details: ["We measure height, width, and thickness","We inspect site conditions","We discuss glass type and safety","We suggest design options"], timeline: "Within 24 hours" },
       2: { icon: "📝", title: "Design & Quote", desc: "We provide 3D designs and a fully transparent quotation.", details: ["3D designs for understanding","Detailed quote with no hidden charges","Modification options available","50% advance to confirm"], timeline: "1-2 days" },
@@ -332,7 +377,6 @@
     }
     function closeProcessModal() { document.getElementById("processModal").classList.remove("active"); }
 
-    // Quote Form
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
       e.preventDefault(); 
       const name = document.getElementById('qName').value.trim();
@@ -359,7 +403,6 @@
       setTimeout(() => { window.open(`https://wa.me/${waNumber}?text=${waText}`, "_blank"); this.reset(); submitBtn.textContent = "📩 Send Inquiry"; successBox.style.display = 'none'; }, 1000); 
     });
 
-    // PWA Setup
     if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js').then(reg => console.log('PWA OK')).catch(err => console.log('PWA Error')); }); }
     let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
