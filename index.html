@@ -3,358 +3,293 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Om Glass Decor | Premium Glass & Mirrors in Udaipur</title>
-  <meta name="description" content="Udaipur's trusted glass decorators since 1986. LED Mirrors, Glass Blocks, Toughened Glass, Custom Partitions.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231a1a1a'/><text x='50' y='68' font-size='40' font-family='Arial' fill='%23c0c0c0' text-anchor='middle' font-weight='bold'>OG</text></svg>">
+  <title>Om Glass Decor | Premium Glass Solutions in Udaipur</title>
+  <meta name="description" content="Udaipur's trusted glass decorators since 1986. Toughened Glass, LED Mirrors, Glass Partitions.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230066cc'/><text x='50' y='68' font-size='40' font-family='Arial' fill='%23ffffff' text-anchor='middle' font-weight='bold'>OG</text></svg>">
   
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#1a1a1a">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0066cc">
   
   <style>
     :root {
-      --bg-dark: #0f0f11; 
-      --bg-light: #fcfcfc; 
-      --text-dark: #1a1a1a;
-      --text-muted: #777777; 
-      --gold: #c5a36b; 
-      --whatsapp: #25D366; 
-      --border: #eeeeee;
+      --primary-blue: #0066cc; /* Glass Company jaisa Blue */
+      --text-dark: #222222;
+      --text-light: #666666;
+      --bg-light: #f8f9fa;
+      --gold: #f1c40f; /* Button ka yellow/gold */
+      --whatsapp: #25D366;
+      --border: #eaeaea;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg-light); color: var(--text-dark); scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: var(--text-dark); scroll-behavior: smooth; overflow-x: hidden; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; }
 
-    /* --- CLASSIC HEADER --- */
-    .site-header { background: #fff; padding: 20px 7%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); transition: 0.3s; }
-    .brand { display: flex; align-items: center; gap: 15px; }
-    .brand-mark { width: 50px; height: 50px; background: var(--text-dark); color: #fff; display: grid; place-items: center; font-weight: bold; font-size: 20px; border: 1px solid var(--gold); border-radius: 2px; font-family: 'Georgia', serif; }
-    .brand strong { display: block; font-size: 20px; letter-spacing: 2px; color: var(--text-dark); font-family: 'Georgia', serif; font-weight: normal; }
-    .brand small { display: block; font-size: 10px; color: var(--gold); letter-spacing: 3px; margin-top: 2px; text-transform: uppercase; }
-    .header-nav { display: flex; gap: 30px; }
-    .header-nav a { font-size: 14px; font-weight: 500; color: var(--text-muted); position: relative; transition: 0.3s; }
-    .header-nav a:hover, .header-nav a.active { color: var(--text-dark); }
-    .header-nav a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 1px; background: var(--gold); transition: 0.3s; }
-    .header-nav a:hover::after { width: 100%; }
-    .header-wa { background: var(--text-dark); color: #fff; padding: 12px 24px; border-radius: 2px; font-size: 13px; font-weight: 600; letter-spacing: 1px; transition: 0.3s; }
-    .header-wa:hover { background: var(--gold); }
+    /* --- TOP BAR --- */
+    .top-bar { background: #f1f3f6; color: var(--text-light); font-size: 12px; padding: 8px 7%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+    .top-bar-left, .top-bar-right { display: flex; gap: 20px; align-items: center; }
+    .top-bar i { color: var(--primary-blue); margin-right: 5px; }
+    .top-socials a { margin-left: 10px; color: var(--text-light); transition: 0.2s; }
+    .top-socials a:hover { color: var(--primary-blue); }
 
-    /* --- CLASSIC HERO --- */
-    .hero { position: relative; min-height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 7%; background: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=85') center/cover fixed; }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.8)); z-index: 1; }
+    /* --- HEADER --- */
+    .site-header { background: #fff; padding: 15px 7%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand-mark { width: 40px; height: 40px; background: var(--primary-blue); color: #fff; display: grid; place-items: center; font-weight: bold; font-size: 20px; border-radius: 4px; }
+    .brand strong { display: block; font-size: 20px; letter-spacing: 0.5px; color: var(--text-dark); font-weight: 800; line-height: 1; }
+    .brand small { display: block; font-size: 10px; color: var(--primary-blue); letter-spacing: 2px; margin-top: 4px; text-transform: uppercase; font-weight: bold; }
     
-    .hero-content { position: relative; max-width: 800px; color: #fff; z-index: 2; }
-    .hero-content .eyebrow { display: inline-block; font-size: 12px; letter-spacing: 5px; color: var(--gold); font-weight: 600; margin-bottom: 25px; text-transform: uppercase; }
-    .hero-content h1 { font-family: 'Georgia', serif; font-size: clamp(40px, 5vw, 70px); line-height: 1.15; margin-bottom: 25px; font-weight: normal; }
-    .hero-content h1 em { color: var(--gold); font-style: italic; }
-    .hero-content p { font-size: 17px; color: #e0e0e0; line-height: 1.8; margin-bottom: 45px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .header-nav { display: flex; gap: 25px; }
+    .header-nav a { font-size: 13px; font-weight: 600; color: var(--text-dark); text-transform: uppercase; transition: color 0.2s; }
+    .header-nav a:hover, .header-nav a.active { color: var(--primary-blue); }
+
+    /* --- HERO SECTION (Screenshot Jaisa) --- */
+    .hero { position: relative; height: 80vh; min-height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat fixed; }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); z-index: 1; }
     
-    .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { background: var(--gold); color: var(--text-dark); padding: 16px 40px; border-radius: 2px; font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; transition: 0.3s; border: none; cursor: pointer; }
-    .btn-primary:hover { background: #b08e57; transform: translateY(-2px); }
-    .btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.6); color: #fff; padding: 16px 40px; border-radius: 2px; font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; transition: 0.3s; }
-    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+    .hero-content { position: relative; z-index: 2; color: #fff; max-width: 800px; padding: 0 20px; }
+    .hero-content h1 { font-size: clamp(32px, 4vw, 50px); font-weight: 700; margin-bottom: 25px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+    .hero-content .btn-hero { 
+      background: var(--gold); color: #222; padding: 14px 35px; border-radius: 30px; 
+      font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; 
+      display: inline-block; transition: 0.3s; border: none; cursor: pointer;
+    }
+    .hero-content .btn-hero:hover { background: #e0b000; transform: translateY(-2px); }
 
-    /* --- TRUST BADGES --- */
-    .trust-bar { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 30px 7%; background: #fff; border-bottom: 1px solid var(--border); }
-    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; color: var(--text-dark); }
-    .trust-item span { font-size: 20px; color: var(--gold); }
-
-    /* --- SECTIONS COMMON --- */
-    .section-wrap { padding: 100px 7%; }
-    .section-heading { text-align: center; margin-bottom: 60px; }
-    .section-heading .eyebrow { display: block; font-size: 12px; letter-spacing: 4px; color: var(--gold); font-weight: bold; text-transform: uppercase; margin-bottom: 15px; }
-    .section-heading h2 { font-family: 'Georgia', serif; font-size: 38px; color: var(--text-dark); font-weight: normal; }
-    .section-heading p { color: var(--text-muted); font-size: 15px; margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; }
-
-    /* --- CLEAN PRODUCT CARDS --- */
-    .products-section { background: #fff; }
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .product-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: all 0.4s; }
-    .product-card:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.06); transform: translateY(-5px); }
-    .product-img-wrap { position: relative; width: 100%; height: 280px; overflow: hidden; background: #f9f9f9; }
-    .product-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
-    .product-card:hover .product-img-wrap img { transform: scale(1.05); }
-    .product-tag { position: absolute; top: 15px; left: 15px; background: var(--gold); color: #fff; font-size: 10px; font-weight: bold; padding: 5px 12px; border-radius: 2px; letter-spacing: 1px; }
-    .product-info { padding: 30px 25px; text-align: center; }
-    .product-info h3 { font-family: 'Georgia', serif; font-size: 22px; margin-bottom: 10px; color: var(--text-dark); font-weight: normal; }
-    .product-info p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
-    .enquire-btn { display: inline-block; text-align: center; border-bottom: 1px solid var(--gold); color: var(--text-dark); padding-bottom: 5px; font-size: 13px; font-weight: 600; transition: 0.3s; letter-spacing: 1px; text-transform: uppercase; }
-    .enquire-btn:hover { color: var(--gold); }
-
-    /* --- PROCESS --- */
-    .process-section { background: var(--bg-light); }
-    .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
-    .process-step { text-align: center; padding: 40px 20px; background: #fff; border-radius: 8px; border: 1px solid var(--border); transition: 0.3s; cursor: pointer; }
-    .process-step:hover { border-color: var(--gold); transform: translateY(-5px); }
-    .process-icon { width: 80px; height: 80px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 25px; transition: 0.3s; }
-    .process-step:hover .process-icon { background: var(--gold); color: #fff; }
-    .process-step h3 { font-family: 'Georgia', serif; font-size: 20px; margin-bottom: 10px; font-weight: normal; }
-    .process-step p { font-size: 14px; color: var(--text-muted); }
-
-    /* --- QUOTE FORM --- */
-    .quote-section { background: #fff; }
-    .quote-split-wrapper { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; background: var(--bg-light); border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
-    .quote-form-side { padding: 60px 50px; }
-    .quote-form-side h2 { font-family: 'Georgia', serif; font-size: 32px; margin-bottom: 10px; font-weight: normal; }
-    .quote-form-side > p { color: var(--text-muted); font-size: 14px; margin-bottom: 30px; }
-    .custom-form-alert { display: none; background: #fee2e2; color: #b91c1c; padding: 12px; border-radius: 6px; font-size: 13px; font-weight: bold; margin-bottom: 20px; border: 1px solid #fca5a5; }
-    .custom-form-success { display: none; background: #dcfce7; color: #166534; padding: 12px; border-radius: 6px; font-size: 13px; font-weight: bold; margin-bottom: 20px; border: 1px solid #86efac; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px; }
-    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; font-size: 14px; outline: none; transition: 0.2s; background: #fff; }
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--text-dark); }
-    .form-submit-btn { width: 100%; padding: 18px; background: var(--text-dark); color: #fff; border: none; border-radius: 4px; font-weight: 600; font-size: 14px; cursor: pointer; transition: 0.3s; letter-spacing: 1px; text-transform: uppercase; }
-    .form-submit-btn:hover { background: var(--gold); }
+    /* --- FEATURED CATEGORIES (Screenshot Jaisa) --- */
+    .featured-section { padding: 70px 7%; background: var(--bg-light); text-align: center; }
+    .section-title { font-size: 28px; font-weight: 600; color: var(--text-dark); margin-bottom: 40px; }
     
-    .quote-info-side { position: relative; background: var(--text-dark); display: flex; flex-direction: column; justify-content: center; padding: 50px; }
-    .quote-info-side h3 { font-family: 'Georgia', serif; font-size: 28px; color: #fff; margin-bottom: 25px; font-weight: normal; }
-    .info-item { display: flex; gap: 15px; margin-bottom: 20px; font-size: 14px; color: #ccc; line-height: 1.6; }
-    .info-item span { font-size: 20px; color: var(--gold); }
-    .info-item a { color: #fff; font-weight: 600; }
-    .btn-whatsapp-small { display: inline-flex; align-items: center; gap: 8px; background: var(--whatsapp); color: #fff; padding: 14px 30px; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 20px; transition: 0.3s; }
-    .btn-whatsapp-small:hover { background: #128C7E; }
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .cat-card { background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: 0.3s; cursor: pointer; }
+    .cat-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    .cat-img { width: 100%; height: 180px; overflow: hidden; background: #fff; display: flex; align-items: center; justify-content: center; }
+    .cat-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+    .cat-card:hover .cat-img img { transform: scale(1.05); }
+    .cat-title { padding: 15px; font-weight: 600; color: var(--primary-blue); font-size: 15px; background: #fff; border-top: 1px solid var(--border); }
 
-    /* --- MODAL --- */
-    .custom-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); z-index: 9999; display: none; align-items: center; justify-content: center; padding: 20px; }
-    .custom-modal-overlay.active { display: flex; }
-    .custom-modal-box { background: #fff; border-radius: 8px; max-width: 550px; width: 100%; padding: 45px; position: relative; max-height: 85vh; overflow-y: auto; }
-    .modal-close-btn { position: absolute; top: 20px; right: 20px; background: var(--bg-light); border: none; width: 35px; height: 35px; border-radius: 50%; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-    .modal-icon-big { font-size: 50px; margin-bottom: 20px; display: block; }
-    .modal-title { font-family: 'Georgia', serif; font-size: 28px; color: var(--text-dark); margin-bottom: 15px; font-weight: normal; }
-    .modal-desc { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; }
-    .modal-list { padding-left: 20px; margin-bottom: 20px; }
-    .modal-list li { font-size: 14px; color: var(--text-dark); line-height: 1.8; margin-bottom: 8px; }
-    .modal-timeline { background: var(--bg-light); padding: 15px; border-radius: 4px; margin-top: 15px; font-size: 13px; }
+    /* --- ABOUT / WHY US --- */
+    .about-section { padding: 80px 7%; background: #fff; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
+    .about-image { flex: 1; min-width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .about-content { flex: 1; min-width: 300px; }
+    .about-content .eyebrow { font-size: 12px; color: var(--primary-blue); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+    .about-content h2 { font-size: 32px; font-weight: 700; color: var(--text-dark); margin-bottom: 20px; line-height: 1.3; }
+    .about-content p { font-size: 15px; color: var(--text-light); line-height: 1.8; margin-bottom: 25px; }
+    .check-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+    .check-item { font-size: 14px; font-weight: 600; color: var(--text-dark); display: flex; align-items: center; gap: 8px; }
+    .check-item::before { content: '✔'; color: var(--primary-blue); font-size: 16px; }
+
+    /* --- CONTACT FORM --- */
+    .contact-section { padding: 80px 7%; background: var(--bg-light); text-align: center; }
+    .contact-box { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
+    .contact-box h2 { font-size: 24px; margin-bottom: 20px; text-align: center; color: var(--text-dark); }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 5px; color: var(--text-light); }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; font-size: 14px; outline: none; }
+    .form-group input:focus { border-color: var(--primary-blue); }
+    .btn-submit { width: 100%; padding: 15px; background: var(--primary-blue); color: #fff; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.3s; }
+    .btn-submit:hover { background: #004c99; }
+    .form-success { display: none; background: #d4edda; color: #155724; padding: 12px; border-radius: 4px; font-size: 14px; font-weight: bold; margin-bottom: 15px; border: 1px solid #c3e6cb; text-align: center; }
 
     /* --- FOOTER --- */
-    .site-footer { background: var(--text-dark); color: #888; padding: 70px 7% 30px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 50px; }
-    .footer-grid h3, .footer-grid h4 { color: #fff; margin-bottom: 20px; font-family: 'Georgia', serif; font-weight: normal; }
-    .footer-grid p, .footer-grid a { font-size: 13px; line-height: 2.2; display: block; color: #888; }
-    .footer-grid a:hover { color: var(--gold); }
-    .footer-bottom { text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 12px; }
+    .site-footer { background: #222; color: #aaa; padding: 60px 7% 20px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto 40px; }
+    .footer-grid h3 { color: #fff; margin-bottom: 20px; font-size: 16px; border-bottom: 2px solid var(--primary-blue); padding-bottom: 10px; display: inline-block; }
+    .footer-grid p, .footer-grid a { font-size: 13px; line-height: 2; display: block; color: #aaa; }
+    .footer-grid a:hover { color: #fff; }
+    .footer-bottom { text-align: center; border-top: 1px solid #444; padding-top: 20px; font-size: 12px; }
 
     /* --- WHATSAPP FLOAT --- */
-    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(37,211,102,0.4); z-index: 1000; animation: pulse 2s infinite; transition: transform 0.3s; }
-    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(37,211,102,0.4); z-index: 1000; animation: pulse 2s infinite; }
     .whatsapp-float svg { width: 34px; height: 34px; }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); } 70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
 
     /* --- RESPONSIVE --- */
     @media (max-width: 900px) {
-      .hero-content h1 { font-size: 42px; }
+      .top-bar-left span { display: none; }
       .header-nav { display: none; }
-      .quote-split-wrapper { grid-template-columns: 1fr; }
-      .quote-section { padding: 50px 5%; }
       .hero { background-attachment: scroll; }
     }
     @media (max-width: 650px) {
       .site-header { padding: 15px 5%; }
-      .hero-content h1 { font-size: 34px; }
-      .product-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+      .featured-section { padding: 50px 5%; }
+      .about-section { padding: 50px 5%; }
+      .contact-section { padding: 50px 5%; }
+      .contact-box { padding: 25px; }
+      .cat-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .cat-img { height: 130px; }
+      .cat-title { font-size: 12px; padding: 10px; }
       .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
-      .quote-form-side { padding: 40px 25px; }
-      .quote-info-side { padding: 30px 25px; }
-      .section-wrap { padding: 60px 5%; }
     }
   </style>
 </head>
 <body>
 
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span>📧 info@omglassdecor.com</span>
+      <span>📞 +91 97841 85252</span>
+    </div>
+    <div class="top-bar-right">
+      <div class="top-socials">
+        <a href="#">FB</a>
+        <a href="#">IG</a>
+        <a href="#">IN</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
   <header class="site-header">
     <a href="index.html" class="brand">
       <span class="brand-mark">OG</span>
-      <span><strong>OM GLASS DECOR</strong><small>SINCE 1986 · UDAIPUR</small></span>
+      <span><strong>Om Glass</strong><small>Decor · Udaipur</small></span>
     </a>
     <div class="header-nav">
       <a href="index.html" class="active">Home</a>
       <a href="products.html">Products</a>
-      <a href="price-list.html">Price List</a>
+      <a href="about.html">About Us</a>
       <a href="gallery.html">Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html">Contact Us</a>
     </div>
-    <a href="https://wa.me/919784185252?text=Hello%20Om%20Glass%20Decor" target="_blank" class="header-wa">Enquire Now</a>
   </header>
 
-  <!-- CLASSIC HERO -->
+  <!-- HERO SECTION (Glass Building Image) -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="eyebrow">ESTABLISHED IN 1986</span>
-      <h1>Timeless Elegance<br>With <em>Glass & Mirrors.</em></h1>
-      <p>Udaipur's most trusted glass studio. We design and install premium LED mirrors, toughened glass, and architectural partitions.</p>
-      <div class="hero-buttons">
-        <a href="products.html" class="btn-primary">Explore Collection</a>
-        <a href="#quote" class="btn-secondary">Get a Quote</a>
-      </div>
+      <h1>Exclusive Range of<br>Toughened Glass</h1>
+      <a href="products.html" class="btn-hero">Read More</a>
     </div>
   </section>
 
-  <div class="trust-bar">
-    <div class="trust-item"><span>🏆</span> 38+ Years Legacy</div>
-    <div class="trust-item"><span>💎</span> Premium Quality</div>
-    <div class="trust-item"><span>🎨</span> Bespoke Designs</div>
-    <div class="trust-item"><span>🛡️</span> Safe & Durable</div>
-  </div>
-
-  <!-- CLEAN PRODUCTS -->
-  <section class="section-wrap products-section">
-    <div class="section-heading">
-      <span class="eyebrow">OUR COLLECTION</span>
-      <h2>Crafted for Elegance</h2>
-      <p>Explore our finest glass solutions designed for modern spaces.</p>
-    </div>
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=600&q=80" alt="LED Mirrors"><span class="product-tag">BESTSELLER</span></div>
-        <div class="product-info"><h3>Smart LED Mirrors</h3><p>Touch-sensor LED mirrors with anti-fog technology.</p><a href="https://wa.me/919784185252?text=Hi,%20I%20want%20to%20enquire%20about%20Smart%20LED%20Mirrors." target="_blank" class="enquire-btn">Enquire Now</a></div>
-      </div>
-      <div class="product-card">
-        <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Glass Blocks"></div>
-        <div class="product-info"><h3>Decorative Glass Blocks</h3><p>Elegant glass blocks for partitions and lighting.</p><a href="https://wa.me/919784185252?text=Hi,%20I%20want%20to%20enquire%20about%20Decorative%20Glass%20Blocks." target="_blank" class="enquire-btn">Enquire Now</a></div>
-      </div>
-      <div class="product-card">
-        <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Toughened Glass"></div>
-        <div class="product-info"><h3>Toughened Glass</h3><p>High-strength safety glass for railings.</p><a href="https://wa.me/919784185252?text=Hi,%20I%20want%20to%20enquire%20about%20Toughened%20Glass." target="_blank" class="enquire-btn">Enquire Now</a></div>
-      </div>
+  <!-- FEATURED CATEGORIES -->
+  <section class="featured-section">
+    <h2 class="section-title">Featured Categories</h2>
+    <div class="cat-grid">
+      <a href="products.html" class="cat-card">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=400&q=80" alt="Toughened Glass"></div>
+        <div class="cat-title">Toughened Glass</div>
+      </a>
+      <a href="products.html" class="cat-card">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=400&q=80" alt="LED Mirrors"></div>
+        <div class="cat-title">LED Mirrors</div>
+      </a>
+      <a href="products.html" class="cat-card">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=80" alt="Glass Partitions"></div>
+        <div class="cat-title">Glass Partitions</div>
+      </a>
+      <a href="products.html" class="cat-card">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=400&q=80" alt="Shower Enclosures"></div>
+        <div class="cat-title">Shower Enclosures</div>
+      </a>
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section class="section-wrap process-section">
-    <div class="section-heading">
-      <span class="eyebrow">OUR PROCESS</span>
-      <h2>From Concept to Installation</h2>
+  <!-- ABOUT / WHY US -->
+  <section class="about-section">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Glass Manufacturing">
     </div>
-    <div class="process-grid">
-      <div class="process-step" onclick="openProcessModal(1)"><div class="process-icon">📏</div><h3>Site Visit</h3><p>Exact measurements at your site.</p></div>
-      <div class="process-step" onclick="openProcessModal(2)"><div class="process-icon">📝</div><h3>Design & Quote</h3><p>3D designs and transparent quote.</p></div>
-      <div class="process-step" onclick="openProcessModal(3)"><div class="process-icon">⚙️</div><h3>Fabrication</h3><p>Precision cutting and polishing.</p></div>
-      <div class="process-step" onclick="openProcessModal(4)"><div class="process-icon">🛠️</div><h3>Installation</h3><p>Perfect and safe installation.</p></div>
+    <div class="about-content">
+      <span class="eyebrow">Since 1986</span>
+      <h2>Udaipur's Most Trusted Glass Experts</h2>
+      <p>We have been serving the city with premium quality glass solutions for over 38 years. From residential complexes to commercial buildings, our glass speaks for itself.</p>
+      <div class="check-list">
+        <div class="check-item">ISO Certified Materials</div>
+        <div class="check-item">Expert Installation</div>
+        <div class="check-item">Custom Designs</div>
+        <div class="check-item">Free Site Visit</div>
+      </div>
+      <a href="about.html" class="btn-hero" style="background:var(--primary-blue); color:#fff;">Learn More</a>
     </div>
   </section>
 
-  <!-- QUOTE FORM -->
-  <section class="section-wrap quote-section" id="quote">
-    <div class="quote-split-wrapper">
-      <div class="quote-form-side">
-        <h2>Request a Quote</h2>
-        <p>Fill the form and our team will get back to you within 30 minutes.</p>
-        
-        <div id="formAlert" class="custom-form-alert">⚠️ Please fill all required fields.</div>
-        <div id="formSuccess" class="custom-form-success">✅ Redirecting to WhatsApp...</div>
-
-        <form id="quoteForm" novalidate>
-          <div class="form-group"><label>Full Name *</label><input type="text" id="qName" placeholder="Your name"></div>
-          <div class="form-group"><label>Phone Number *</label><input type="tel" id="qPhone" placeholder="10-digit mobile number"></div>
-          <div class="form-group" style="display: flex; gap: 15px;">
-            <div style="flex: 1;"><label>Height (ft)</label><input type="number" id="qHeight" placeholder="6"></div>
-            <div style="flex: 1;"><label>Width (ft)</label><input type="number" id="qWidth" placeholder="3"></div>
-            <div style="flex: 1;"><label>Qty</label><input type="number" id="qQty" placeholder="1"></div>
-          </div>
-          <div class="form-group">
-            <label>Service Required *</label>
-            <select id="qService">
-              <option value="" disabled selected>Select service</option>
-              <option value="LED Mirror">Smart LED Mirror</option>
-              <option value="Glass Partition">Glass Partition</option>
-              <option value="Toughened Glass">Toughened Glass</option>
-              <option value="Shower Enclosure">Shower Enclosure</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Installation Type</label>
-            <select id="qInstall">
-              <option value="" disabled selected>Select type</option>
-              <option value="Wall Mounted">Wall Mounted</option>
-              <option value="Sliding Door">Sliding Door</option>
-              <option value="Hinged Door">Hinged Door</option>
-              <option value="Only Supply">Only Supply</option>
-            </select>
-          </div>
-          <button type="submit" class="form-submit-btn" id="submitBtn">Send Inquiry →</button>
-        </form>
-      </div>
-      
-      <div class="quote-info-side">
-        <h3>Visit Our Studio</h3>
-        <div class="info-item"><span>📍</span><p>3-A, Shiv Chowk, Kalka Mata Road, Pahada, Udaipur - 313001</p></div>
-        <div class="info-item"><span>📞</span><p><a href="tel:+919784185252">+91 97841 85252</a></p></div>
-        <div class="info-item"><span>✉️</span><p>info@omglassdecor.com</p></div>
-        <a href="https://wa.me/919784185252" target="_blank" class="btn-whatsapp-small">💬 Chat on WhatsApp</a>
-      </div>
+  <!-- CONTACT FORM -->
+  <section class="contact-section" id="contact">
+    <h2 style="font-size:32px; margin-bottom:10px;">Get a Quote</h2>
+    <p style="color:var(--text-light); margin-bottom:30px;">Fill the form below to get a quick price estimate.</p>
+    
+    <div class="contact-box">
+      <div id="formSuccess" class="form-success">✅ Thank you! Redirecting to WhatsApp...</div>
+      <form id="quoteForm">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" id="qName" placeholder="Enter name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" id="qPhone" placeholder="Enter 10-digit number" required>
+        </div>
+        <div class="form-group" style="display:flex; gap:10px;">
+          <div style="flex:1;"><label>Height (ft)</label><input type="number" id="qHeight" placeholder="6"></div>
+          <div style="flex:1;"><label>Width (ft)</label><input type="number" id="qWidth" placeholder="3"></div>
+          <div style="flex:1;"><label>Qty</label><input type="number" id="qQty" placeholder="1"></div>
+        </div>
+        <div class="form-group">
+          <label>Service *</label>
+          <select id="qService" required>
+            <option value="" disabled selected>Select Service</option>
+            <option value="Toughened Glass">Toughened Glass</option>
+            <option value="LED Mirror">LED Mirror</option>
+            <option value="Glass Partition">Glass Partition</option>
+            <option value="Shower Enclosure">Shower Enclosure</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit">Send Inquiry</button>
+      </form>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
-        <h3>OM GLASS DECOR</h3>
-        <p>Premium Glass & Mirror solutions in Udaipur. Serving elegance since 1986.</p>
+        <h3>Om Glass Decor</h3>
+        <p>Premium glass manufacturing and installation in Udaipur since 1986. Quality, durability, and elegance in every piece.</p>
       </div>
       <div>
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a><a href="products.html">Products</a><a href="price-list.html">Price List</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div>
-        <h4>Contact Us</h4>
-        <a href="tel:+919784185252">📞 +91 97841 85252</a>
-        <a href="https://wa.me/919784185252">💬 WhatsApp</a>
-        <p>📍 Udaipur, Rajasthan</p>
+        <h3>Contact</h3>
+        <p>📍 3-A, Shiv Chowk, Udaipur</p>
+        <p>📞 +91 97841 85252</p>
+        <p>📧 info@omglassdecor.com</p>
       </div>
     </div>
     <div class="footer-bottom">© 2026 Om Glass Decor. All rights reserved.</div>
   </footer>
-
-  <!-- MODAL -->
-  <div class="custom-modal-overlay" id="processModal" onclick="if(event.target===this) closeProcessModal()">
-    <div class="custom-modal-box">
-      <button onclick="closeProcessModal()" class="modal-close-btn">×</button>
-      <div id="processModalContent"></div>
-    </div>
-  </div>
 
   <a href="https://wa.me/919784185252" target="_blank" class="whatsapp-float">
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 2C8.28 2 2 8.28 2 16c0 2.47.64 4.79 1.76 6.81L2 30l7.39-1.71A13.93 13.93 0 0 0 16.004 30C23.72 30 30 23.72 30 16S23.72 2 16.004 2z" fill="#fff"/><path d="M21.66 18.14c-.23-.12-1.38-.68-1.6-.76-.21-.08-.37-.12-.53.12-.16.24-.61.76-.75.92-.14.16-.28.18-.51.06-.23-.12-1-.37-1.91-1.18-.71-.63-1.18-1.41-1.32-1.65-.14-.24-.02-.37.1-.49.11-.11.23-.28.35-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.27-.72-1.74-.19-.46-.38-.4-.53-.4h-.45c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.57.18 1.09.15 1.5.09.46-.07 1.38-.56 1.58-1.11.2-.55.2-1.02.14-1.11-.06-.09-.22-.15-.45-.27z" fill="#fff"/></svg>
   </a>
 
   <script>
-    const processData = {
-      1: { icon: "📏", title: "Site Visit & Measurement", desc: "Our team visits your location for precise measurements.", details: ["Height, width & thickness measurement","Site condition inspection","Material & design consultation","Timeline discussion"], timeline: "Within 24 hours" },
-      2: { icon: "📝", title: "Design & Quote", desc: "We provide 3D designs and a transparent quotation.", details: ["3D visual designs","Detailed cost breakdown","Modification options","50% advance to confirm"], timeline: "1-2 days" },
-      3: { icon: "⚙️", title: "Fabrication", desc: "Your glass is carefully cut and processed.", details: ["Precision cutting","Toughening","Edge polishing","Quality check"], timeline: "3-5 days" },
-      4: { icon: "🛠️", title: "Installation", desc: "Our skilled team installs the glass perfectly.", details: ["Expert installation","Premium hardware","Final cleanup","Warranty card"], timeline: "1-2 days" }
-    };
-
-    function openProcessModal(step) {
-      const d = processData[step];
-      document.getElementById("processModalContent").innerHTML = `<span class="modal-icon-big">${d.icon}</span><h3 class="modal-title">${d.title}</h3><p class="modal-desc">${d.desc}</p><ul class="modal-list">${d.details.map(x => `<li>${x}</li>`).join("")}</ul><div class="modal-timeline"><strong>⏱️ Timeframe:</strong> ${d.timeline}</div>`;
-      document.getElementById("processModal").classList.add("active");
-    }
-    function closeProcessModal() { document.getElementById("processModal").classList.remove("active"); }
-
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
       e.preventDefault(); 
-      const name = document.getElementById('qName').value.trim(), phone = document.getElementById('qPhone').value.trim();
-      const h = document.getElementById('qHeight').value.trim() || "0", w = document.getElementById('qWidth').value.trim() || "0", q = document.getElementById('qQty').value.trim() || "1";
-      const service = document.getElementById('qService').value, install = document.getElementById('qInstall').value;
-      const alertBox = document.getElementById('formAlert'), successBox = document.getElementById('formSuccess'), submitBtn = document.getElementById('submitBtn');
-
-      if(!name || !phone || !service) { alertBox.style.display = 'block'; setTimeout(() => alertBox.style.display = 'none', 4000); return; }
-      if(phone.length !== 10 || isNaN(phone)) { alertBox.textContent = "⚠️ Enter valid 10-digit number."; alertBox.style.display = 'block'; setTimeout(() => alertBox.style.display = 'none', 4000); return; }
-
-      const area = (h * w * q).toFixed(2);
-      let waText = `*NEW INQUIRY - Om Glass Decor*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Size:* ${h}ft x ${w}ft (Qty: ${q})%0A*Area:* ${area} Sq.Ft%0A*Installation:* ${install || 'Not specified'}`;
+      const name = document.getElementById('qName').value;
+      const phone = document.getElementById('qPhone').value;
+      const h = document.getElementById('qHeight').value || "0";
+      const w = document.getElementById('qWidth').value || "0";
+      const q = document.getElementById('qQty').value || "1";
+      const service = document.getElementById('qService').value;
       
-      submitBtn.textContent = "Redirecting..."; successBox.style.display = 'block';
-      setTimeout(() => { window.open(`https://wa.me/919784185252?text=${waText}`, "_blank"); this.reset(); submitBtn.textContent = "Send Inquiry →"; successBox.style.display = 'none'; }, 1000); 
+      const success = document.getElementById('formSuccess');
+      
+      if(phone.length !== 10) { alert("Enter valid 10-digit mobile number"); return; }
+      
+      const area = (h * w * q).toFixed(2);
+      let waText = `*NEW INQUIRY - Om Glass Decor*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Size:* ${h}ft x ${w}ft%0A*Qty:* ${q}%0A*Area:* ${area} Sq.Ft`;
+      
+      success.style.display = 'block';
+      setTimeout(() => { window.open(`https://wa.me/919784185252?text=${waText}`, "_blank"); this.reset(); success.style.display = 'none'; }, 1000); 
     });
-
-    if ('serviceWorker' in navigator) { window.addEventListener('load', () => navigator.serviceWorker.register('/service-worker.js').catch(e=>console.log(e))); }
   </script>
 </body>
 </html>
